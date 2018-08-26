@@ -1,0 +1,2 @@
+github "layoutBox/FlexLayout"
+github "Alamofire/Alamofire" ~> 4.7

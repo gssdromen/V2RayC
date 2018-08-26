@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.3.11",
+  "iOS" : [
+    {
+      "name" : "FlexLayout",
+      "hash" : "fbf20d22ee3bba75346d802bfa7f533c1d6fbb7a0f9c5db477e6da3d6b12c20e"
+    }
+  ]
+}
