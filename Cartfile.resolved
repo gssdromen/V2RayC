@@ -1,2 +1,2 @@
 github "Alamofire/Alamofire" "4.7.3"
-github "layoutBox/FlexLayout" "1.3.11"
+github "linkedin/LayoutKit" "9.0.0"

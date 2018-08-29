@@ -1,2 +1,2 @@
-github "layoutBox/FlexLayout"
+github "linkedin/LayoutKit"
 github "Alamofire/Alamofire" ~> 4.7

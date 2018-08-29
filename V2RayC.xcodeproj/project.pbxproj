@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821C827621344F4100C2EFA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821C827421344F4100C2EFA7 /* Alamofire.framework */; };
+		821C827721344F4100C2EFA7 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 821C827421344F4100C2EFA7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		821C827821344F4100C2EFA7 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821C827521344F4100C2EFA7 /* LayoutKit.framework */; };
+		821C827921344F4100C2EFA7 /* LayoutKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 821C827521344F4100C2EFA7 /* LayoutKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		821C827F21344FA400C2EFA7 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 821C827D21344FA400C2EFA7 /* Alamofire.framework.dSYM */; };
+		821C828021344FA400C2EFA7 /* LayoutKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 821C827E21344FA400C2EFA7 /* LayoutKit.framework.dSYM */; };
+		821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBA213448B3001B58DC /* ProxyItemView.swift */; };
+		821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */; };
+		8293463E2136FE340094719B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8293463D2136FE340094719B /* Main.storyboard */; };
 		82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134121316D8800759AE0 /* MainProxyListViewController.swift */; };
-		82EA134421316D8800759AE0 /* MainProxyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82EA134221316D8800759AE0 /* MainProxyListViewController.xib */; };
 		82EA134621316DB200759AE0 /* MainProxyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134521316DB200759AE0 /* MainProxyListViewModel.swift */; };
 		82EA134921316E2100759AE0 /* ProxyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134821316E2100759AE0 /* ProxyModel.swift */; };
 		82F15A63213110730079E98A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F15A62213110730079E98A /* AppDelegate.swift */; };
 		82F15A65213110750079E98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82F15A64213110750079E98A /* Assets.xcassets */; };
-		82F15A68213110750079E98A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F15A66213110750079E98A /* MainMenu.xib */; };
 		82F15A74213110750079E98A /* V2RayCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F15A73213110750079E98A /* V2RayCTests.swift */; };
 		82F15A7F213110750079E98A /* V2RayCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F15A7E213110750079E98A /* V2RayCUITests.swift */; };
 /* End PBXBuildFile section */
@@ -35,15 +42,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		821C827A21344F4100C2EFA7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				821C827721344F4100C2EFA7 /* Alamofire.framework in Embed Frameworks */,
+				821C827921344F4100C2EFA7 /* LayoutKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821C827B21344F6700C2EFA7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				821C827F21344FA400C2EFA7 /* Alamofire.framework.dSYM in CopyFiles */,
+				821C828021344FA400C2EFA7 /* LayoutKit.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		821C827421344F4100C2EFA7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		821C827521344F4100C2EFA7 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Carthage/Build/Mac/LayoutKit.framework; sourceTree = "<group>"; };
+		821C827D21344FA400C2EFA7 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		821C827E21344FA400C2EFA7 /* LayoutKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LayoutKit.framework.dSYM; path = Carthage/Build/Mac/LayoutKit.framework.dSYM; sourceTree = "<group>"; };
+		821DBCBA213448B3001B58DC /* ProxyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemView.swift; sourceTree = "<group>"; };
+		821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemAddView.swift; sourceTree = "<group>"; };
+		8293463D2136FE340094719B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		82EA134121316D8800759AE0 /* MainProxyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProxyListViewController.swift; sourceTree = "<group>"; };
-		82EA134221316D8800759AE0 /* MainProxyListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainProxyListViewController.xib; sourceTree = "<group>"; };
 		82EA134521316DB200759AE0 /* MainProxyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProxyListViewModel.swift; sourceTree = "<group>"; };
 		82EA134821316E2100759AE0 /* ProxyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyModel.swift; sourceTree = "<group>"; };
 		82F15A5F213110730079E98A /* V2RayC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2RayC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F15A62213110730079E98A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82F15A64213110750079E98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		82F15A67213110750079E98A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		82F15A69213110750079E98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F15A6A213110750079E98A /* V2RayC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = V2RayC.entitlements; sourceTree = "<group>"; };
 		82F15A6F213110750079E98A /* V2RayCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2RayCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821C827621344F4100C2EFA7 /* Alamofire.framework in Frameworks */,
+				821C827821344F4100C2EFA7 /* LayoutKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +119,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821DBCB921344898001B58DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				821DBCBA213448B3001B58DC /* ProxyItemView.swift */,
+				821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		82EA133F21316D5D00759AE0 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				821DBCB921344898001B58DC /* Views */,
 				82EA134721316DF800759AE0 /* Models */,
 				82EA134021316D5D00759AE0 /* MainProxyListViewController */,
 			);
@@ -92,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				82EA134121316D8800759AE0 /* MainProxyListViewController.swift */,
-				82EA134221316D8800759AE0 /* MainProxyListViewController.xib */,
 				82EA134521316DB200759AE0 /* MainProxyListViewModel.swift */,
 			);
 			path = MainProxyListViewController;
@@ -109,6 +158,10 @@
 		82F15A56213110730079E98A = {
 			isa = PBXGroup;
 			children = (
+				821C827D21344FA400C2EFA7 /* Alamofire.framework.dSYM */,
+				821C827E21344FA400C2EFA7 /* LayoutKit.framework.dSYM */,
+				821C827421344F4100C2EFA7 /* Alamofire.framework */,
+				821C827521344F4100C2EFA7 /* LayoutKit.framework */,
 				82F15A61213110730079E98A /* V2RayC */,
 				82F15A72213110750079E98A /* V2RayCTests */,
 				82F15A7D213110750079E98A /* V2RayCUITests */,
@@ -132,9 +185,9 @@
 				82EA133F21316D5D00759AE0 /* Src */,
 				82F15A62213110730079E98A /* AppDelegate.swift */,
 				82F15A64213110750079E98A /* Assets.xcassets */,
-				82F15A66213110750079E98A /* MainMenu.xib */,
 				82F15A69213110750079E98A /* Info.plist */,
 				82F15A6A213110750079E98A /* V2RayC.entitlements */,
+				8293463D2136FE340094719B /* Main.storyboard */,
 			);
 			path = V2RayC;
 			sourceTree = "<group>";
@@ -167,6 +220,8 @@
 				82F15A5B213110730079E98A /* Sources */,
 				82F15A5C213110730079E98A /* Frameworks */,
 				82F15A5D213110730079E98A /* Resources */,
+				821C827A21344F4100C2EFA7 /* Embed Frameworks */,
+				821C827B21344F6700C2EFA7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -261,9 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82EA134421316D8800759AE0 /* MainProxyListViewController.xib in Resources */,
 				82F15A65213110750079E98A /* Assets.xcassets in Resources */,
-				82F15A68213110750079E98A /* MainMenu.xib in Resources */,
+				8293463E2136FE340094719B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,9 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */,
 				82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */,
 				82EA134621316DB200759AE0 /* MainProxyListViewModel.swift in Sources */,
 				82EA134921316E2100759AE0 /* ProxyModel.swift in Sources */,
+				821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */,
 				82F15A63213110730079E98A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,17 +381,6 @@
 			targetProxy = 82F15A7B213110750079E98A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		82F15A66213110750079E98A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82F15A67213110750079E98A /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		82F15A81213110750079E98A /* Debug */ = {
@@ -459,6 +504,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D64HA3E2LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = V2RayC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,6 +527,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D64HA3E2LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = V2RayC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
