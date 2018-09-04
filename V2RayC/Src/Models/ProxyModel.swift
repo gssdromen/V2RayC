@@ -52,4 +52,6 @@ class ProxyModel: NSObject {
     var network: ProxyNetwork?
     /// 是否启用tls
     var tls: Bool?
+    /// 如果配置来自文件, 这个字符串存了配置文件的地址
+    var configPath: String?
 }

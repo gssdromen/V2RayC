@@ -9,5 +9,22 @@
 import Cocoa
 
 class MainProxyListViewModel: NSObject {
-
+    var proxyItems = [ProxyModel]()
+    
+    func mockData() {
+        let model1 = ProxyModel()
+        model1.remarks = "test1"
+        model1.address = "122.22.22.22"
+        model1.port = 90
+        model1.from = ProxyFrom.normal
+        
+        let model2 = ProxyModel()
+        model2.remarks = "test2"
+        model2.address = "33.21.23.55"
+        model2.port = 92
+        model2.from = ProxyFrom.normal
+        
+        proxyItems.append(model1)
+        proxyItems.append(model2)
+    }
 }

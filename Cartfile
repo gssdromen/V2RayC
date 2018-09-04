@@ -1,2 +1,4 @@
 github "linkedin/LayoutKit"
+github "layoutBox/PinLayout"
 github "Alamofire/Alamofire" ~> 4.7
+github "thii/SwiftHEXColors"

@@ -7,27 +7,27 @@
 //
 
 import Cocoa
-import LayoutKit
+//import LayoutKit
+import PinLayout
 
 class ProxyItemAddView: NSView {
+//    var addMarkLayout: SizeLayout<NSImageView>?
+    var addMark = NSImageView()
 
     // MARK: - Views About
-
+    override func layout() {
+        super.layout()
+        addMark.pin.width(57).height(57).center()
+    }
 
     // MARK: - Life Cycle
+    
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
+        wantsLayer = true
         
-        let addMark = SizeLayout<NSImageView>(
-            width: 57,
-            height: 57,
-            alignment: .center,
-            config: { imageView in
-                let addImage = NSImage(named: NSImage.Name(rawValue: "icon_ProxyItemAddView_Add"))
-                imageView.image = addImage
-            }
-        )
-        addMark.arrangement().makeViews(in: self, direction: UserInterfaceLayoutDirection.leftToRight)
+        addMark.image = NSImage(named: NSImage.Name(rawValue: "icon_ProxyItemAddView_Add"))
+        addSubview(addMark)
     }
 
     required init?(coder decoder: NSCoder) {
