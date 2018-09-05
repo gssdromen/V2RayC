@@ -15,9 +15,9 @@ class MainProxyListViewController: NSViewController {
     }()
     let scrollView = NSScrollView()
     let viewModel = MainProxyListViewModel()
-    
+
     var runTask: Process!
-    
+
     // MARK: - Views About
 
     // MARK: - Life Cycle
@@ -42,13 +42,13 @@ class MainProxyListViewController: NSViewController {
 //        collectionView.frame = view.bounds
 //        view.addSubview(collectionView)
     }
-    
+
     func setupScrollView() {
         scrollView.documentView = collectionView
         scrollView.frame = view.bounds
         view.addSubview(scrollView)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.mockData()
@@ -61,11 +61,11 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return 1
     }
-    
+
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.proxyItems.count + 1
     }
-    
+
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         var identifier: String!
         if indexPath.item < viewModel.proxyItems.count {
@@ -79,7 +79,7 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
         }
         return cell
     }
-    
+
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         if indexPaths.count == 1 {
             // 新增还是选中
@@ -87,17 +87,16 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToAddProxy"), sender: self)
                 collectionView.selectionIndexes.removeAll()
             } else {
-//                let model = viewModel.proxyItems[indexPaths.first!.item]
-//                let plistPath = "\(NSHomeDirectory())/Library/Application Support/V2RayC/com.dromen.V2RayC.v2ray-core.plist"
-//                generateLaunchdPlist(path: plistPath, configPath: model.configPath!)
                 print(NSHomeDirectory())
-                let a: NSDictionary = ["a": "b"]
-                let falg = a.write(toFile: "\(NSHomeDirectory())/aa.txt", atomically: false)
-                print(falg)
+                let model = viewModel.proxyItems[indexPaths.first!.item]
+                generateLaunchdPlistFromProxyModel(model: model)
+                DispatchQueue.global().async {
+                    _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
+                }
             }
         }
     }
-    
+
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier!.rawValue == "ToAddProxy" {
             guard let addVC = segue.destinationController as? AddProxyViewController else {

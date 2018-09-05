@@ -41,6 +41,7 @@
 		A7E0CBB9213AD7F800180853 /* ProxyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBB8213AD7F800180853 /* ProxyItemCell.swift */; };
 		A7E0CBBC213AD80F00180853 /* ProxyItemAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBBA213AD80F00180853 /* ProxyItemAddCell.swift */; };
 		A7E0CBC0213ADDB500180853 /* AddProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBBF213ADDB500180853 /* AddProxyViewController.swift */; };
+		A7EEA4AB213F7F59005291C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EEA4AA213F7F59005291C7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		A7E0CBB8213AD7F800180853 /* ProxyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemCell.swift; sourceTree = "<group>"; };
 		A7E0CBBA213AD80F00180853 /* ProxyItemAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemAddCell.swift; sourceTree = "<group>"; };
 		A7E0CBBF213ADDB500180853 /* AddProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProxyViewController.swift; sourceTree = "<group>"; };
+		A7EEA4AA213F7F59005291C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				A728EF56213E8A6F00C7FC6B /* Utils.swift */,
+				A7EEA4AA213F7F59005291C7 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E0CBC0213ADDB500180853 /* AddProxyViewController.swift in Sources */,
+				A7EEA4AB213F7F59005291C7 /* Constants.swift in Sources */,
 				A7E0CBB9213AD7F800180853 /* ProxyItemCell.swift in Sources */,
 				821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */,
 				82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */,

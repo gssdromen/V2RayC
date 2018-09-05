@@ -14,9 +14,8 @@ class MainProxyListViewModel: NSObject {
     func mockData() {
         let model1 = ProxyModel()
         model1.remarks = "test1"
-        model1.address = "122.22.22.22"
-        model1.port = 90
-        model1.from = ProxyFrom.normal
+        model1.configPath = "/Users/cedricwu/Tools/v2ray/config_dsp2.json"
+        model1.from = ProxyFrom.custom
         
         let model2 = ProxyModel()
         model2.remarks = "test2"
