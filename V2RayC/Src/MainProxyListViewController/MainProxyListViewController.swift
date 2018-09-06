@@ -10,6 +10,7 @@ import Cocoa
 import Security
 import SecurityFoundation
 
+
 class MainProxyListViewController: NSViewController {
     let collectionView: NSCollectionView = {
         let v = NSCollectionView()
@@ -56,6 +57,7 @@ class MainProxyListViewController: NSViewController {
         viewModel.mockData()
         setupCollectionView()
         setupScrollView()
+        viewModel.fetchSubscibeFrom(url: "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246")
     }
 }
 
@@ -110,6 +112,10 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
 }
 
 extension MainProxyListViewController: AddProxyViewDelegate {
+    func addSubscribeUrlSuccess(subscribeUrl: String) {
+        
+    }
+    
     func addProxySuccess(proxy: ProxyModel) {
         viewModel.proxyItems.append(proxy)
         collectionView.reloadData()

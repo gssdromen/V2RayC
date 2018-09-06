@@ -10,6 +10,7 @@
 		821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBA213448B3001B58DC /* ProxyItemView.swift */; };
 		821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */; };
 		8293463E2136FE340094719B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8293463D2136FE340094719B /* Main.storyboard */; };
+		82E2595621417D7100175C16 /* VmessUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2595521417D7100175C16 /* VmessUtils.swift */; };
 		82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134121316D8800759AE0 /* MainProxyListViewController.swift */; };
 		82EA134621316DB200759AE0 /* MainProxyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134521316DB200759AE0 /* MainProxyListViewModel.swift */; };
 		82EA134921316E2100759AE0 /* ProxyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134821316E2100759AE0 /* ProxyModel.swift */; };
@@ -99,6 +100,7 @@
 		821DBCBA213448B3001B58DC /* ProxyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemView.swift; sourceTree = "<group>"; };
 		821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemAddView.swift; sourceTree = "<group>"; };
 		8293463D2136FE340094719B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		82E2595521417D7100175C16 /* VmessUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VmessUtils.swift; sourceTree = "<group>"; };
 		82EA134121316D8800759AE0 /* MainProxyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProxyListViewController.swift; sourceTree = "<group>"; };
 		82EA134521316DB200759AE0 /* MainProxyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProxyListViewModel.swift; sourceTree = "<group>"; };
 		82EA134821316E2100759AE0 /* ProxyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyModel.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				A728EF56213E8A6F00C7FC6B /* Utils.swift */,
 				A7EEA4AA213F7F59005291C7 /* Constants.swift */,
+				82E2595521417D7100175C16 /* VmessUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				A7E0CBC0213ADDB500180853 /* AddProxyViewController.swift in Sources */,
 				A7EEA4AB213F7F59005291C7 /* Constants.swift in Sources */,
 				A7E0CBB9213AD7F800180853 /* ProxyItemCell.swift in Sources */,
+				82E2595621417D7100175C16 /* VmessUtils.swift in Sources */,
 				821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */,
 				82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */,
 				A7E0CBBC213AD80F00180853 /* ProxyItemAddCell.swift in Sources */,
