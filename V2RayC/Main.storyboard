@@ -973,14 +973,30 @@
                                     <action selector="cancelClicked:" target="JLD-fq-6qU" id="LUX-ha-088"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="reE-eN-IPU">
+                                <rect key="frame" x="329" y="23" width="153" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="9LT-AD-L3h"/>
+                                    <constraint firstAttribute="height" constant="50" id="cQq-vt-q7R"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundRect" title="设置订阅" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="k9J-me-INj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="subscribeClicked:" target="JLD-fq-6qU" id="thi-0Z-yZh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eVE-1c-p0t" secondAttribute="trailing" constant="59" id="0Pw-ni-32g"/>
                             <constraint firstItem="IkX-6K-dox" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="1XG-gB-m2r"/>
                             <constraint firstItem="lNh-6w-RLr" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="6Ew-lW-fgb"/>
+                            <constraint firstAttribute="bottom" secondItem="reE-eN-IPU" secondAttribute="bottom" constant="23" id="8TX-IM-uA9"/>
                             <constraint firstItem="kEx-Ov-1Q4" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="187" id="Dvi-kg-xXt"/>
                             <constraint firstItem="dfn-AL-Drt" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="E2F-Fw-qmn"/>
                             <constraint firstItem="SgX-AT-ZPz" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="395" id="EAc-Il-vuv"/>
+                            <constraint firstItem="MDM-Jn-8rD" firstAttribute="leading" secondItem="reE-eN-IPU" secondAttribute="trailing" constant="61" id="Eiu-n8-FYg"/>
                             <constraint firstItem="TW3-Gw-duP" firstAttribute="centerY" secondItem="KsG-4B-e6i" secondAttribute="centerY" id="IK9-BR-YFR"/>
                             <constraint firstItem="KsG-4B-e6i" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="30" id="ImW-ef-2Pc"/>
                             <constraint firstItem="dfn-AL-Drt" firstAttribute="centerY" secondItem="kEx-Ov-1Q4" secondAttribute="centerY" id="IvR-wh-112"/>

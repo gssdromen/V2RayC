@@ -13,6 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        // 创建Launch要用到的文件夹
+//        let path = Bundle.main.path(forResource: "initLaunchPath", ofType: "sh")
+//        _ = runShell(shellFilePath: path!)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

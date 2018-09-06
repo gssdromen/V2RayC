@@ -12,9 +12,11 @@ import SwiftHEXColors
 
 protocol AddProxyViewDelegate: class {
     func addProxySuccess(proxy: ProxyModel)
+    func addSubscribeUrlSuccess(subscribeUrl: String)
 }
 
 class AddProxyViewController: NSViewController {
+    var subscribeView = AddSubscribeView()
     @IBOutlet weak var psInput: NSTextField!
     @IBOutlet weak var addressInput: NSTextField!
     @IBOutlet weak var portInput: NSTextField!
@@ -32,6 +34,12 @@ class AddProxyViewController: NSViewController {
     }
     
     // MARK: - UI Event
+    @IBAction func subscribeClicked(_ sender: NSButton) {
+        view.addSubview(subscribeView)
+        subscribeView.layer?.backgroundColor = NSColor.red.cgColor
+        subscribeView.pin.center().width(400).height(80)
+    }
+    
     @IBAction func confirmClicked(_ sender: NSButton) {
         view.window?.close()
     }
@@ -66,6 +74,15 @@ class AddProxyViewController: NSViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeView.delegate = self
     }
     
+}
+
+extension AddProxyViewController: AddSubscribeViewDelegate {
+    func subscribeViewConfirmClicked(view: AddSubscribeView, url: String) {
+        if let dele = delegate {
+            dele.addSubscribeUrlSuccess(subscribeUrl: url)
+        }
+    }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2018年 cedric. All rights reserved.
 //
 import Foundation
+import Cocoa
 
 func generateLaunchdPlistFromProxyModel(model: ProxyModel) -> Void {
     let isDir: UnsafeMutablePointer<ObjCBool> = UnsafeMutablePointer<ObjCBool>.allocate(capacity: 1)
@@ -52,4 +53,20 @@ func runCommandLine(binPath: String, args: [String]?) -> Int32 {
     print(String(data: stderrReader.readDataToEndOfFile(), encoding: String.Encoding.utf8) ?? "NO stderr")
     task.waitUntilExit()
     return task.terminationStatus
+}
+
+func runShell(shellFilePath: String) -> Bool {
+    let scriptString = "do shell script \"bash \(shellFilePath)\" with administrator privileges"
+    if let appleScript = NSAppleScript(source: scriptString) {
+        var possibleError: NSDictionary?
+        if let outputString = appleScript.executeAndReturnError(&possibleError).stringValue {
+            print(outputString)
+            return true
+        } else if (possibleError != nil) {
+            print("error: ", possibleError!)
+            return false
+        }
+    }
+    
+    return false
 }

@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import Security
+import SecurityFoundation
 
 class MainProxyListViewController: NSViewController {
     let collectionView: NSCollectionView = {
@@ -87,10 +89,10 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToAddProxy"), sender: self)
                 collectionView.selectionIndexes.removeAll()
             } else {
-                print(NSHomeDirectory())
                 let model = viewModel.proxyItems[indexPaths.first!.item]
                 generateLaunchdPlistFromProxyModel(model: model)
                 DispatchQueue.global().async {
+                    _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
                     _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
                 }
             }
