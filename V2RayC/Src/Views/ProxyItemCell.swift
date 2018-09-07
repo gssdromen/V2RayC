@@ -11,12 +11,22 @@ import Cocoa
 class ProxyItemCell: NSCollectionViewItem {
     let myContentView = ProxyItemView()
     
+    // MARK: - Public Methods
     func fillWith(model: ProxyModel) {
         myContentView.fillWith(model: model)
     }
     
+    func selected(flag: Bool) {
+        if flag {
+            myContentView.frame = NSRect(x: 6, y: 6, width: view.bounds.width - 12, height: view.bounds.height - 12)
+        } else {
+            myContentView.frame = NSRect(x: 12, y: 12, width: view.bounds.width - 24, height: view.bounds.height - 24)
+        }
+    }
+    
+    // MARK: - Life Cycle
     override func viewWillLayout() {
-        myContentView.frame = NSRect(x: 6, y: 6, width: view.bounds.width - 12, height: view.bounds.height - 12)
+        myContentView.frame = NSRect(x: 12, y: 12, width: view.bounds.width - 24, height: view.bounds.height - 24)
     }
     
     override func loadView() {
@@ -37,7 +47,7 @@ class ProxyItemCell: NSCollectionViewItem {
         myContentView.layer?.borderColor = NSColor.white.cgColor
         myContentView.layer?.borderWidth = 1
         myContentView.layer?.cornerRadius = 6
-        
+
         view.addSubview(myContentView)
     }
     

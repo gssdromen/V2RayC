@@ -18,6 +18,29 @@
 		82F15A65213110750079E98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82F15A64213110750079E98A /* Assets.xcassets */; };
 		82F15A74213110750079E98A /* V2RayCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F15A73213110750079E98A /* V2RayCTests.swift */; };
 		82F15A7F213110750079E98A /* V2RayCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F15A7E213110750079E98A /* V2RayCUITests.swift */; };
+		A702078F214245100077DE65 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702077B2142450F0077DE65 /* User.swift */; };
+		A7020790214245100077DE65 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702077C2142450F0077DE65 /* Setting.swift */; };
+		A7020791214245100077DE65 /* StreamSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702077D2142450F0077DE65 /* StreamSetting.swift */; };
+		A7020792214245100077DE65 /* WsSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702077E2142450F0077DE65 /* WsSetting.swift */; };
+		A7020793214245100077DE65 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702077F2142450F0077DE65 /* Header.swift */; };
+		A7020794214245100077DE65 /* Mux.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70207802142450F0077DE65 /* Mux.swift */; };
+		A7020795214245100077DE65 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70207812142450F0077DE65 /* Routing.swift */; };
+		A7020796214245100077DE65 /* Outbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020782214245100077DE65 /* Outbound.swift */; };
+		A7020797214245100077DE65 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020783214245100077DE65 /* Log.swift */; };
+		A7020798214245100077DE65 /* TlsSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020784214245100077DE65 /* TlsSetting.swift */; };
+		A7020799214245100077DE65 /* OutboundDetour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020785214245100077DE65 /* OutboundDetour.swift */; };
+		A702079A214245100077DE65 /* KcpSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020786214245100077DE65 /* KcpSetting.swift */; };
+		A702079B214245100077DE65 /* Inbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020787214245100077DE65 /* Inbound.swift */; };
+		A702079C214245100077DE65 /* Dns.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020788214245100077DE65 /* Dns.swift */; };
+		A702079D214245100077DE65 /* ProxyConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7020789214245100077DE65 /* ProxyConfigModel.swift */; };
+		A702079E214245100077DE65 /* Allocate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078A214245100077DE65 /* Allocate.swift */; };
+		A702079F214245100077DE65 /* InboundDetour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078B214245100077DE65 /* InboundDetour.swift */; };
+		A70207A0214245100077DE65 /* TcpSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078C214245100077DE65 /* TcpSetting.swift */; };
+		A70207A1214245100077DE65 /* Vnext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078D214245100077DE65 /* Vnext.swift */; };
+		A70207A2214245100077DE65 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078E214245100077DE65 /* Rule.swift */; };
+		A70207A4214245DC0077DE65 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70207A3214245DC0077DE65 /* ObjectMapper.framework */; };
+		A70207A5214245DC0077DE65 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70207A3214245DC0077DE65 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70207A7214245EC0077DE65 /* ObjectMapper.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */; };
 		A70CAABD213A819100807255 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAAB9213A819000807255 /* Alamofire.framework */; };
 		A70CAABE213A819100807255 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAAB9213A819000807255 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A70CAABF213A819100807255 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAABA213A819000807255 /* LayoutKit.framework */; };
@@ -26,11 +49,9 @@
 		A70CAAC6213A820300807255 /* LayoutKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */; };
 		A728EF4D213E802300C7FC6B /* geoip.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF45213E802200C7FC6B /* geoip.dat */; };
 		A728EF4E213E802300C7FC6B /* geosite.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF46213E802200C7FC6B /* geosite.dat */; };
-		A728EF4F213E802300C7FC6B /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A728EF47213E802200C7FC6B /* config.json */; };
 		A728EF50213E802300C7FC6B /* v2ray.sig in Resources */ = {isa = PBXBuildFile; fileRef = A728EF48213E802200C7FC6B /* v2ray.sig */; };
 		A728EF51213E802300C7FC6B /* v2ray in Resources */ = {isa = PBXBuildFile; fileRef = A728EF49213E802200C7FC6B /* v2ray */; };
 		A728EF52213E802300C7FC6B /* v2ctl in Resources */ = {isa = PBXBuildFile; fileRef = A728EF4A213E802200C7FC6B /* v2ctl */; };
-		A728EF53213E802300C7FC6B /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = A728EF4B213E802200C7FC6B /* readme.md */; };
 		A728EF54213E802300C7FC6B /* v2ctl.sig in Resources */ = {isa = PBXBuildFile; fileRef = A728EF4C213E802200C7FC6B /* v2ctl.sig */; };
 		A728EF57213E8A6F00C7FC6B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728EF56213E8A6F00C7FC6B /* Utils.swift */; };
 		A73256CD2140F71000DBE2BA /* initLaunchPath.sh in Resources */ = {isa = PBXBuildFile; fileRef = A73256CC2140F71000DBE2BA /* initLaunchPath.sh */; };
@@ -75,6 +96,7 @@
 			files = (
 				A7E0CBB4213AC6D300180853 /* PinLayout.framework in Embed Frameworks */,
 				A7E0CBAF213AC15F00180853 /* SwiftHEXColors.framework in Embed Frameworks */,
+				A70207A5214245DC0077DE65 /* ObjectMapper.framework in Embed Frameworks */,
 				A70CAAC0213A819100807255 /* LayoutKit.framework in Embed Frameworks */,
 				A70CAABE213A819100807255 /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -89,6 +111,7 @@
 			files = (
 				A70CAAC5213A820300807255 /* Alamofire.framework.dSYM in CopyFiles */,
 				A7E0CBB6213AC6DB00180853 /* PinLayout.framework.dSYM in CopyFiles */,
+				A70207A7214245EC0077DE65 /* ObjectMapper.framework.dSYM in CopyFiles */,
 				A70CAAC6213A820300807255 /* LayoutKit.framework.dSYM in CopyFiles */,
 				A7E0CBB1213AC16E00180853 /* SwiftHEXColors.framework.dSYM in CopyFiles */,
 			);
@@ -115,17 +138,37 @@
 		82F15A7A213110750079E98A /* V2RayCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2RayCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F15A7E213110750079E98A /* V2RayCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2RayCUITests.swift; sourceTree = "<group>"; };
 		82F15A80213110750079E98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A702077B2142450F0077DE65 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A702077C2142450F0077DE65 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		A702077D2142450F0077DE65 /* StreamSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamSetting.swift; sourceTree = "<group>"; };
+		A702077E2142450F0077DE65 /* WsSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsSetting.swift; sourceTree = "<group>"; };
+		A702077F2142450F0077DE65 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		A70207802142450F0077DE65 /* Mux.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mux.swift; sourceTree = "<group>"; };
+		A70207812142450F0077DE65 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		A7020782214245100077DE65 /* Outbound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outbound.swift; sourceTree = "<group>"; };
+		A7020783214245100077DE65 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A7020784214245100077DE65 /* TlsSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TlsSetting.swift; sourceTree = "<group>"; };
+		A7020785214245100077DE65 /* OutboundDetour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutboundDetour.swift; sourceTree = "<group>"; };
+		A7020786214245100077DE65 /* KcpSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KcpSetting.swift; sourceTree = "<group>"; };
+		A7020787214245100077DE65 /* Inbound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inbound.swift; sourceTree = "<group>"; };
+		A7020788214245100077DE65 /* Dns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dns.swift; sourceTree = "<group>"; };
+		A7020789214245100077DE65 /* ProxyConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyConfigModel.swift; sourceTree = "<group>"; };
+		A702078A214245100077DE65 /* Allocate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allocate.swift; sourceTree = "<group>"; };
+		A702078B214245100077DE65 /* InboundDetour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboundDetour.swift; sourceTree = "<group>"; };
+		A702078C214245100077DE65 /* TcpSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpSetting.swift; sourceTree = "<group>"; };
+		A702078D214245100077DE65 /* Vnext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vnext.swift; sourceTree = "<group>"; };
+		A702078E214245100077DE65 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		A70207A3214245DC0077DE65 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Frameworks/ObjectMapper.framework; sourceTree = "<group>"; };
+		A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjectMapper.framework.dSYM; path = Frameworks/ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
 		A70CAAB9213A819000807255 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Frameworks/Alamofire.framework; sourceTree = "<group>"; };
 		A70CAABA213A819000807255 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Frameworks/LayoutKit.framework; sourceTree = "<group>"; };
 		A70CAAC2213A820200807255 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Frameworks/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LayoutKit.framework.dSYM; path = Frameworks/LayoutKit.framework.dSYM; sourceTree = "<group>"; };
 		A728EF45213E802200C7FC6B /* geoip.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geoip.dat; sourceTree = "<group>"; };
 		A728EF46213E802200C7FC6B /* geosite.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geosite.dat; sourceTree = "<group>"; };
-		A728EF47213E802200C7FC6B /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		A728EF48213E802200C7FC6B /* v2ray.sig */ = {isa = PBXFileReference; lastKnownFileType = file; path = v2ray.sig; sourceTree = "<group>"; };
 		A728EF49213E802200C7FC6B /* v2ray */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = v2ray; sourceTree = "<group>"; };
 		A728EF4A213E802200C7FC6B /* v2ctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = v2ctl; sourceTree = "<group>"; };
-		A728EF4B213E802200C7FC6B /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		A728EF4C213E802200C7FC6B /* v2ctl.sig */ = {isa = PBXFileReference; lastKnownFileType = file; path = v2ctl.sig; sourceTree = "<group>"; };
 		A728EF56213E8A6F00C7FC6B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A73256CC2140F71000DBE2BA /* initLaunchPath.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = initLaunchPath.sh; sourceTree = "<group>"; };
@@ -153,6 +196,7 @@
 				A7E0CBAE213AC15F00180853 /* SwiftHEXColors.framework in Frameworks */,
 				A70CAABF213A819100807255 /* LayoutKit.framework in Frameworks */,
 				A70CAABD213A819100807255 /* Alamofire.framework in Frameworks */,
+				A70207A4214245DC0077DE65 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +252,26 @@
 		82EA134721316DF800759AE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A702078A214245100077DE65 /* Allocate.swift */,
+				A7020788214245100077DE65 /* Dns.swift */,
+				A702077F2142450F0077DE65 /* Header.swift */,
+				A7020787214245100077DE65 /* Inbound.swift */,
+				A702078B214245100077DE65 /* InboundDetour.swift */,
+				A7020786214245100077DE65 /* KcpSetting.swift */,
+				A7020783214245100077DE65 /* Log.swift */,
+				A70207802142450F0077DE65 /* Mux.swift */,
+				A7020782214245100077DE65 /* Outbound.swift */,
+				A7020785214245100077DE65 /* OutboundDetour.swift */,
+				A7020789214245100077DE65 /* ProxyConfigModel.swift */,
+				A70207812142450F0077DE65 /* Routing.swift */,
+				A702078E214245100077DE65 /* Rule.swift */,
+				A702077C2142450F0077DE65 /* Setting.swift */,
+				A702077D2142450F0077DE65 /* StreamSetting.swift */,
+				A702078C214245100077DE65 /* TcpSetting.swift */,
+				A7020784214245100077DE65 /* TlsSetting.swift */,
+				A702077B2142450F0077DE65 /* User.swift */,
+				A702078D214245100077DE65 /* Vnext.swift */,
+				A702077E2142450F0077DE65 /* WsSetting.swift */,
 				82EA134821316E2100759AE0 /* ProxyModel.swift */,
 			);
 			path = Models;
@@ -216,6 +280,8 @@
 		82F15A56213110730079E98A = {
 			isa = PBXGroup;
 			children = (
+				A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */,
+				A70207A3214245DC0077DE65 /* ObjectMapper.framework */,
 				A7E0CBB5213AC6DB00180853 /* PinLayout.framework.dSYM */,
 				A7E0CBB0213AC16E00180853 /* SwiftHEXColors.framework.dSYM */,
 				A70CAAC2213A820200807255 /* Alamofire.framework.dSYM */,
@@ -280,11 +346,9 @@
 			children = (
 				A728EF45213E802200C7FC6B /* geoip.dat */,
 				A728EF46213E802200C7FC6B /* geosite.dat */,
-				A728EF47213E802200C7FC6B /* config.json */,
 				A728EF48213E802200C7FC6B /* v2ray.sig */,
 				A728EF49213E802200C7FC6B /* v2ray */,
 				A728EF4A213E802200C7FC6B /* v2ctl */,
-				A728EF4B213E802200C7FC6B /* readme.md */,
 				A728EF4C213E802200C7FC6B /* v2ctl.sig */,
 			);
 			path = v2ray;
@@ -439,12 +503,10 @@
 			files = (
 				A728EF52213E802300C7FC6B /* v2ctl in Resources */,
 				A728EF54213E802300C7FC6B /* v2ctl.sig in Resources */,
-				A728EF53213E802300C7FC6B /* readme.md in Resources */,
 				A73256CD2140F71000DBE2BA /* initLaunchPath.sh in Resources */,
 				82F15A65213110750079E98A /* Assets.xcassets in Resources */,
 				A728EF4D213E802300C7FC6B /* geoip.dat in Resources */,
 				A728EF50213E802300C7FC6B /* v2ray.sig in Resources */,
-				A728EF4F213E802300C7FC6B /* config.json in Resources */,
 				A728EF4E213E802300C7FC6B /* geosite.dat in Resources */,
 				A728EF51213E802300C7FC6B /* v2ray in Resources */,
 				8293463E2136FE340094719B /* Main.storyboard in Resources */,
@@ -472,19 +534,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7020795214245100077DE65 /* Routing.swift in Sources */,
 				A7E0CBC0213ADDB500180853 /* AddProxyViewController.swift in Sources */,
+				A7020797214245100077DE65 /* Log.swift in Sources */,
+				A70207A2214245100077DE65 /* Rule.swift in Sources */,
 				A7EEA4AB213F7F59005291C7 /* Constants.swift in Sources */,
 				A7E0CBB9213AD7F800180853 /* ProxyItemCell.swift in Sources */,
 				82E2595621417D7100175C16 /* VmessUtils.swift in Sources */,
 				821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */,
+				A7020790214245100077DE65 /* Setting.swift in Sources */,
+				A702079F214245100077DE65 /* InboundDetour.swift in Sources */,
+				A702079A214245100077DE65 /* KcpSetting.swift in Sources */,
 				82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */,
+				A702079D214245100077DE65 /* ProxyConfigModel.swift in Sources */,
+				A702078F214245100077DE65 /* User.swift in Sources */,
+				A7020799214245100077DE65 /* OutboundDetour.swift in Sources */,
+				A7020791214245100077DE65 /* StreamSetting.swift in Sources */,
+				A7020792214245100077DE65 /* WsSetting.swift in Sources */,
+				A70207A0214245100077DE65 /* TcpSetting.swift in Sources */,
+				A7020793214245100077DE65 /* Header.swift in Sources */,
+				A7020794214245100077DE65 /* Mux.swift in Sources */,
+				A7020798214245100077DE65 /* TlsSetting.swift in Sources */,
+				A702079B214245100077DE65 /* Inbound.swift in Sources */,
 				A7E0CBBC213AD80F00180853 /* ProxyItemAddCell.swift in Sources */,
 				A728EF57213E8A6F00C7FC6B /* Utils.swift in Sources */,
+				A702079C214245100077DE65 /* Dns.swift in Sources */,
 				A73257032141268400DBE2BA /* AddSubscribeView.swift in Sources */,
 				82EA134621316DB200759AE0 /* MainProxyListViewModel.swift in Sources */,
 				82EA134921316E2100759AE0 /* ProxyModel.swift in Sources */,
+				A70207A1214245100077DE65 /* Vnext.swift in Sources */,
+				A702079E214245100077DE65 /* Allocate.swift in Sources */,
 				821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */,
 				82F15A63213110730079E98A /* AppDelegate.swift in Sources */,
+				A7020796214245100077DE65 /* Outbound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

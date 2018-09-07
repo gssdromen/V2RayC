@@ -22,6 +22,15 @@ class MainProxyListViewController: NSViewController {
     var runTask: Process!
 
     // MARK: - Views About
+    override func viewWillLayout() {
+        super.viewWillLayout()
+        print("viewWillLayout")
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        print("viewDidLayout")
+    }
 
     // MARK: - Life Cycle
     func setupCollectionView() {
@@ -29,7 +38,7 @@ class MainProxyListViewController: NSViewController {
         collectionView.dataSource = self
         // set flow layout
         let flowLayout = NSCollectionViewFlowLayout()
-        flowLayout.itemSize = NSSize(width: 256, height: 144)
+        flowLayout.itemSize = NSSize(width: 266, height: 154)
         flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
         flowLayout.minimumInteritemSpacing = 51
         flowLayout.minimumLineSpacing = 38
@@ -57,7 +66,11 @@ class MainProxyListViewController: NSViewController {
         viewModel.mockData()
         setupCollectionView()
         setupScrollView()
-        viewModel.fetchSubscibeFrom(url: "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246")
+        viewModel.fetchSubscibeFrom(url: "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246", complete: { [weak self] in
+            if let ss = self {
+                ss.collectionView.reloadData()
+            }
+        })
     }
 }
 
@@ -92,6 +105,11 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 collectionView.selectionIndexes.removeAll()
             } else {
                 let model = viewModel.proxyItems[indexPaths.first!.item]
+                if let from = model.from, from == .subscribtion {
+                    let configModel = genDefaultProxyConfigModel()
+                    configModel.fillWith(model: model)
+                    model.configPath = configModel.writeToConfigJsonFile()
+                }
                 generateLaunchdPlistFromProxyModel(model: model)
                 DispatchQueue.global().async {
                     _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
@@ -113,9 +131,14 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
 
 extension MainProxyListViewController: AddProxyViewDelegate {
     func addSubscribeUrlSuccess(subscribeUrl: String) {
-        
+        viewModel.fetchSubscibeFrom(url: subscribeUrl, complete: { [weak self] in
+            if let ss = self {
+                ss.collectionView.reloadData()
+            }
+        })
+
     }
-    
+
     func addProxySuccess(proxy: ProxyModel) {
         viewModel.proxyItems.append(proxy)
         collectionView.reloadData()
