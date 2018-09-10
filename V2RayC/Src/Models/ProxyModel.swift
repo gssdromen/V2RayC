@@ -59,6 +59,8 @@ class ProxyModel: NSObject, Mappable {
     var host: String?
     // 混淆用的path
     var path: String?
+    // 是否被选中
+    var isSelected: Bool = false
     
     // MARK: - Public Methods
     func saveToDisk() {

@@ -50,14 +50,12 @@ class MainProxyListViewController: NSViewController {
     // MARK: - Life Cycle
     override func viewWillLayout() {
         super.viewWillLayout()
-        print("viewWillLayout")
         scrollView.frame = view.bounds
         collectionView.reloadData()
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        print("viewDidLayout")
     }
 
     override func viewDidLoad() {
@@ -105,17 +103,35 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToAddProxy"), sender: self)
                 collectionView.selectionIndexes.removeAll()
             } else {
-                let model = viewModel.proxyItems[indexPaths.first!.item]
-                if let from = model.from, from == .subscribtion {
-                    let configModel = genDefaultProxyConfigModel()
-                    configModel.fillWith(model: model)
-                    model.configPath = configModel.writeToConfigJsonFile()
+                for i in 0 ..< viewModel.proxyItems.count {
+                    let model = viewModel.proxyItems[i]
+                    if i == indexPaths.first!.item {
+                        model.isSelected = !model.isSelected
+                    } else {
+                        model.isSelected = false
+                    }
+                    
+                    if let from = model.from {
+                        switch from {
+                        case ProxyFrom.subscribtion:
+                            let configModel = genDefaultProxyConfigModel()
+                            configModel.fillWith(model: model)
+                            model.configPath = configModel.writeToConfigJsonFile()
+                        case ProxyFrom.custom:
+                            break
+                        case ProxyFrom.normal:
+                            let configModel = genDefaultProxyConfigModel()
+                            configModel.fillWith(model: model)
+                            model.configPath = configModel.writeToConfigJsonFile()
+                        }
+                    }
+                    generateLaunchdPlistFromProxyModel(model: model)
+                    DispatchQueue.global().async {
+                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
+                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
+                    }
                 }
-                generateLaunchdPlistFromProxyModel(model: model)
-                DispatchQueue.global().async {
-                    _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
-                    _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
-                }
+                collectionView.reloadData()
             }
         }
     }

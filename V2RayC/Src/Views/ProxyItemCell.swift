@@ -16,12 +16,15 @@ class ProxyItemCell: NSCollectionViewItem {
     func fillWith(model: ProxyModel) {
         viewModel = model
         myContentView.fillWith(model: model)
+        selected(flag: model.isSelected)
     }
     
     func selected(flag: Bool) {
         if flag {
+            myContentView.layer?.backgroundColor = NSColor.red.cgColor
             myContentView.frame = NSRect(x: 6, y: 6, width: view.bounds.width - 12, height: view.bounds.height - 12)
         } else {
+            myContentView.layer?.backgroundColor = NSColor.white.cgColor
             myContentView.frame = NSRect(x: 12, y: 12, width: view.bounds.width - 24, height: view.bounds.height - 24)
         }
     }
