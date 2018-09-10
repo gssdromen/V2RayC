@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ObjectMapper
 import Alamofire
 
 class MainProxyListViewModel: NSObject {
@@ -27,6 +28,30 @@ class MainProxyListViewModel: NSObject {
                 }
             }
         }
+    }
+    
+    func saveToDisk() {
+        for model in proxyItems {
+            model.saveToDisk()
+        }
+    }
+    
+    func loadFromDisk() {
+        var models = [ProxyModel]()
+        let fm = FileManager.default
+        if let items = try? fm.contentsOfDirectory(atPath: kV2rayConfigFolderPath) {
+            for item in items {
+                if item.hasSuffix(".json") {
+                    if let context = try? String(contentsOfFile: "\(kV2rayConfigFolderPath)/\(item)", encoding: String.Encoding.utf8) {
+                        if let model = ProxyModel(JSONString: context) {
+                            models.append(model)
+                        }
+                    }
+                }
+                
+            }
+        }
+        proxyItems = models
     }
 
     // MARK: - Private Methods

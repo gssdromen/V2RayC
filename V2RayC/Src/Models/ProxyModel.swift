@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ObjectMapper
 
 enum ProxyFrom: Int {
     /// 从UI设置的, 最普通的
@@ -33,7 +34,7 @@ enum ProxyNetwork: String {
     case http2 = "http2"
 }
 
-class ProxyModel: NSObject {
+class ProxyModel: NSObject, Mappable {
     /// 配置来自
     var from: ProxyFrom?
     /// 地址
@@ -54,7 +55,39 @@ class ProxyModel: NSObject {
     var tls: Bool?
     /// 如果配置来自文件, 这个字符串存了配置文件的地址
     var configPath: String?
+    /// 混淆用的host
+    var host: String?
+    // 混淆用的path
+    var path: String?
     
+    // MARK: - Public Methods
+    func saveToDisk() {
+        if let jsonString = toJSONString() {
+            let path = "\(kV2rayConfigFolderPath)\(remarks ?? "default").json"
+            try? (jsonString as NSString).write(toFile: path, atomically: false, encoding: String.Encoding.utf8.rawValue)
+        }
+    }
+    
+    // MARK: - Mappable
+    required init?(map: Map) { }
+    override init() { }
+    
+    func mapping(map: Map) {
+        from <- map["from"]
+        address <- map["address"]
+        port <- map["port"]
+        remarks <- map["remarks"]
+        id <- map["id"]
+        alterID <- map["alterID"]
+        security <- map["security"]
+        network <- map["network"]
+        tls <- map["tls"]
+        configPath <- map["configPath"]
+        host <- map["host"]
+        path <- map["path"]
+    }
+    
+    // MARK: - Life Cycle
     convenience init(dict: [String: String]) {
         self.init()
         if let ps = dict["ps"] {
@@ -113,9 +146,11 @@ class ProxyModel: NSObject {
                 break
             }
         }
-    }
-    
-    func genConfigJson() -> String {
-        return ""
+        if let h = dict["host"] {
+            host = h
+        }
+        if let p = dict["path"] {
+            path = p
+        }
     }
 }

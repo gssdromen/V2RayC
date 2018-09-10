@@ -10,9 +10,11 @@ import Cocoa
 
 class ProxyItemCell: NSCollectionViewItem {
     let myContentView = ProxyItemView()
+    weak var viewModel: ProxyModel?
     
     // MARK: - Public Methods
     func fillWith(model: ProxyModel) {
+        viewModel = model
         myContentView.fillWith(model: model)
     }
     

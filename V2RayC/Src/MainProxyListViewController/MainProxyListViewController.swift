@@ -22,17 +22,6 @@ class MainProxyListViewController: NSViewController {
     var runTask: Process!
 
     // MARK: - Views About
-    override func viewWillLayout() {
-        super.viewWillLayout()
-        print("viewWillLayout")
-    }
-    
-    override func viewDidLayout() {
-        super.viewDidLayout()
-        print("viewDidLayout")
-    }
-
-    // MARK: - Life Cycle
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -50,27 +39,39 @@ class MainProxyListViewController: NSViewController {
         collectionView.allowsEmptySelection = true
         collectionView.allowsMultipleSelection = false
         collectionView.isSelectable = true
-        // add to view
-//        collectionView.frame = view.bounds
-//        view.addSubview(collectionView)
     }
-
+    
     func setupScrollView() {
         scrollView.documentView = collectionView
         scrollView.frame = view.bounds
         view.addSubview(scrollView)
     }
 
+    // MARK: - Life Cycle
+    override func viewWillLayout() {
+        super.viewWillLayout()
+        print("viewWillLayout")
+        scrollView.frame = view.bounds
+        collectionView.reloadData()
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        print("viewDidLayout")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.mockData()
         setupCollectionView()
         setupScrollView()
-        viewModel.fetchSubscibeFrom(url: "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246", complete: { [weak self] in
-            if let ss = self {
-                ss.collectionView.reloadData()
-            }
-        })
+        // "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246"
+        viewModel.loadFromDisk()
+        collectionView.reloadData()
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        viewModel.saveToDisk()
     }
 }
 
