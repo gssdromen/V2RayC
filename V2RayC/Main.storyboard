@@ -709,13 +709,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
-                    <connections>
-                        <segue destination="JLD-fq-6qU" kind="sheet" identifier="ToAddProxy" id="ODo-VL-rzO"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Select Add Method View Controller-->
+        <scene sceneID="TKa-Kj-RuB">
+            <objects>
+                <viewController storyboardIdentifier="SelectAddMethodViewController" id="9OK-52-FsC" customClass="SelectAddMethodViewController" sceneMemberID="viewController">
+                    <view key="view" id="wu9-BL-AMo">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="180"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGM-cd-aCQ">
+                                <rect key="frame" x="-6" y="113" width="512" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pwi-I9-cgz"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VBp-6y-K3d">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnW-h6-HIX">
+                                <rect key="frame" x="-6" y="53" width="512" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hd1-6l-70K"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wtm-jp-Fet">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-RS-JiM">
+                                <rect key="frame" x="-6" y="-7" width="512" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SuW-sh-C8r"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Uzy-1w-Kae"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cO1-fF-26y">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kY9-RS-JiM" secondAttribute="bottom" id="AO3-xa-ggd"/>
+                            <constraint firstItem="tnW-h6-HIX" firstAttribute="top" secondItem="mGM-cd-aCQ" secondAttribute="bottom" id="L2k-t3-2Xy"/>
+                            <constraint firstAttribute="trailing" secondItem="tnW-h6-HIX" secondAttribute="trailing" id="Nb3-oE-Hkc"/>
+                            <constraint firstAttribute="trailing" secondItem="kY9-RS-JiM" secondAttribute="trailing" id="SwL-Md-x8j"/>
+                            <constraint firstItem="tnW-h6-HIX" firstAttribute="leading" secondItem="wu9-BL-AMo" secondAttribute="leading" id="X1i-3s-Dg8"/>
+                            <constraint firstAttribute="trailing" secondItem="mGM-cd-aCQ" secondAttribute="trailing" id="aPm-d4-HV1"/>
+                            <constraint firstItem="mGM-cd-aCQ" firstAttribute="top" secondItem="wu9-BL-AMo" secondAttribute="top" id="eCc-1v-ic0"/>
+                            <constraint firstItem="kY9-RS-JiM" firstAttribute="leading" secondItem="wu9-BL-AMo" secondAttribute="leading" id="mvD-MJ-Dzd"/>
+                            <constraint firstItem="mGM-cd-aCQ" firstAttribute="leading" secondItem="wu9-BL-AMo" secondAttribute="leading" id="nZo-oW-Phy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="JeA-4e-2rT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="213"/>
         </scene>
         <!--Add Proxy View Controller-->
         <scene sceneID="bvk-Iw-nrI">
@@ -1044,7 +1098,7 @@
                 </viewController>
                 <customObject id="IHI-U3-x52" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="655"/>
+            <point key="canvasLocation" x="1088" y="655"/>
         </scene>
     </scenes>
 </document>

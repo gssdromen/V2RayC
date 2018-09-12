@@ -100,8 +100,11 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
         if indexPaths.count == 1 {
             // 新增还是选中
             if indexPaths.first!.item == viewModel.proxyItems.count {
-                performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToAddProxy"), sender: self)
+                performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToSelectAddProxyType"), sender: self)
                 collectionView.selectionIndexes.removeAll()
+//                let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
+//                let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController"))
+//                print(vc)
             } else {
                 for i in 0 ..< viewModel.proxyItems.count {
                     let model = viewModel.proxyItems[i]
