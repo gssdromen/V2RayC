@@ -18,6 +18,7 @@ class MainProxyListViewController: NSViewController {
     }()
     let scrollView = NSScrollView()
     let viewModel = MainProxyListViewModel()
+    var selectAddMethodViewController: SelectAddMethodViewController?
 
     var runTask: Process!
 
@@ -63,7 +64,7 @@ class MainProxyListViewController: NSViewController {
         setupCollectionView()
         setupScrollView()
         // "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246"
-        viewModel.loadFromDisk()
+//        viewModel.loadFromDisk()
         collectionView.reloadData()
     }
     
@@ -100,11 +101,14 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
         if indexPaths.count == 1 {
             // 新增还是选中
             if indexPaths.first!.item == viewModel.proxyItems.count {
-                performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToSelectAddProxyType"), sender: self)
-                collectionView.selectionIndexes.removeAll()
-//                let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
-//                let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController"))
-//                print(vc)
+//                performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToSelectAddProxyType"), sender: self)
+//                collectionView.selectionIndexes.removeAll()
+                let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
+                if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController")) as? SelectAddMethodViewController {
+                    vc.delegate = self
+                    selectAddMethodViewController = vc
+                    presentViewControllerAsSheet(vc)
+                }
             } else {
                 for i in 0 ..< viewModel.proxyItems.count {
                     let model = viewModel.proxyItems[i]
@@ -162,5 +166,19 @@ extension MainProxyListViewController: AddProxyViewDelegate {
     func addProxySuccess(proxy: ProxyModel) {
         viewModel.proxyItems.append(proxy)
         collectionView.reloadData()
+    }
+}
+
+extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
+    func normalButtonClicked() {
+        
+    }
+    
+    func fromConfigFileButtonClicked() {
+        
+    }
+    
+    func fromSubscribeButtonClicked() {
+        
     }
 }

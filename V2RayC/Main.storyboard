@@ -717,41 +717,50 @@
         <!--Select Add Method View Controller-->
         <scene sceneID="TKa-Kj-RuB">
             <objects>
-                <viewController storyboardIdentifier="SelectAddMethodViewController" id="9OK-52-FsC" customClass="SelectAddMethodViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectAddMethodViewController" id="9OK-52-FsC" customClass="SelectAddMethodViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="wu9-BL-AMo">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="180"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGM-cd-aCQ">
-                                <rect key="frame" x="-6" y="113" width="512" height="71"/>
+                                <rect key="frame" x="0.0" y="120" width="500" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pwi-I9-cgz"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VBp-6y-K3d">
+                                <buttonCell key="cell" type="bevel" title="普通设置" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VBp-6y-K3d">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="15"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="normalButtonClicked:" target="9OK-52-FsC" id="yTC-hF-IIs"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnW-h6-HIX">
-                                <rect key="frame" x="-6" y="53" width="512" height="71"/>
+                                <rect key="frame" x="0.0" y="60" width="500" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Hd1-6l-70K"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wtm-jp-Fet">
+                                <buttonCell key="cell" type="bevel" title="从配置文件中读取" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="wtm-jp-Fet">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="15"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="fromConfigFileClicked:" target="9OK-52-FsC" id="fx8-Rh-Djo"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-RS-JiM">
-                                <rect key="frame" x="-6" y="-7" width="512" height="71"/>
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="SuW-sh-C8r"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Uzy-1w-Kae"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cO1-fF-26y">
+                                <buttonCell key="cell" type="bevel" title="设置订阅地址" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="cO1-fF-26y">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="15"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="fromSubscribeClicked:" target="9OK-52-FsC" id="PZU-0N-LcZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

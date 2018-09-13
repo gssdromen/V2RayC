@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		821DBCBB213448B3001B58DC /* ProxyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBA213448B3001B58DC /* ProxyItemView.swift */; };
 		821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */; };
+		825B8429214AAFD300871498 /* SelectAddMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B8428214AAFD300871498 /* SelectAddMethodViewController.swift */; };
 		8293463E2136FE340094719B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8293463D2136FE340094719B /* Main.storyboard */; };
 		82E2595621417D7100175C16 /* VmessUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2595521417D7100175C16 /* VmessUtils.swift */; };
 		82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA134121316D8800759AE0 /* MainProxyListViewController.swift */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		821DBCBA213448B3001B58DC /* ProxyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemView.swift; sourceTree = "<group>"; };
 		821DBCBC213448F3001B58DC /* ProxyItemAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemAddView.swift; sourceTree = "<group>"; };
+		825B8428214AAFD300871498 /* SelectAddMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddMethodViewController.swift; sourceTree = "<group>"; };
 		8293463D2136FE340094719B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		82E2595521417D7100175C16 /* VmessUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VmessUtils.swift; sourceTree = "<group>"; };
 		82EA134121316D8800759AE0 /* MainProxyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProxyListViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		825B8427214AAFB900871498 /* SelectAddMethodViewController */ = {
+			isa = PBXGroup;
+			children = (
+				825B8428214AAFD300871498 /* SelectAddMethodViewController.swift */,
+			);
+			path = SelectAddMethodViewController;
+			sourceTree = "<group>";
+		};
 		82EA133F21316D5D00759AE0 /* Src */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 				82EA134721316DF800759AE0 /* Models */,
 				82EA134021316D5D00759AE0 /* MainProxyListViewController */,
 				A7E0CBBE213ADD9A00180853 /* AddProxyViewController */,
+				825B8427214AAFB900871498 /* SelectAddMethodViewController */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -547,6 +558,7 @@
 				A702079A214245100077DE65 /* KcpSetting.swift in Sources */,
 				82EA134321316D8800759AE0 /* MainProxyListViewController.swift in Sources */,
 				A702079D214245100077DE65 /* ProxyConfigModel.swift in Sources */,
+				825B8429214AAFD300871498 /* SelectAddMethodViewController.swift in Sources */,
 				A702078F214245100077DE65 /* User.swift in Sources */,
 				A7020799214245100077DE65 /* OutboundDetour.swift in Sources */,
 				A7020791214245100077DE65 /* StreamSetting.swift in Sources */,
