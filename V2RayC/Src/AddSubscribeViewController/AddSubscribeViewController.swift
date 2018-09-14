@@ -15,6 +15,8 @@ protocol AddSubscribeViewControllerDelegate: NSObjectProtocol {
 class AddSubscribeViewController: NSViewController {
     @IBOutlet weak var textInput: NSTextField!
     
+    var initialTextString = ""
+    
     weak var delegate: AddSubscribeViewControllerDelegate?
     
     // MARK: - UI Event
@@ -32,4 +34,8 @@ class AddSubscribeViewController: NSViewController {
         // Do view setup here.
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        textInput.stringValue = initialTextString
+    }
 }

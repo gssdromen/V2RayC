@@ -12,6 +12,7 @@ import Alamofire
 
 class MainProxyListViewModel: NSObject {
     var proxyItems = [ProxyModel]()
+    var subscribeURLs = [String]()
 
     func mockData() {
     }
@@ -34,6 +35,7 @@ class MainProxyListViewModel: NSObject {
         for model in proxyItems {
             model.saveToDisk()
         }
+        UserDefaults.standard.set(subscribeURLs, forKey: "subscribeURLs")
     }
     
     func loadFromDisk() {
@@ -52,6 +54,9 @@ class MainProxyListViewModel: NSObject {
             }
         }
         proxyItems = models
+        if let arr = UserDefaults.standard.object(forKey: "subscribeURLs") as? [String] {
+            subscribeURLs = arr
+        }
     }
 
     // MARK: - Private Methods

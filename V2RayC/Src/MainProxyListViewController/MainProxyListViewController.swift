@@ -18,7 +18,6 @@ class MainProxyListViewController: NSViewController {
     }()
     let scrollView = NSScrollView()
     let viewModel = MainProxyListViewModel()
-    var selectAddMethodViewController: SelectAddMethodViewController?
 
     var runTask: Process!
 
@@ -64,7 +63,7 @@ class MainProxyListViewController: NSViewController {
         setupCollectionView()
         setupScrollView()
         // "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246"
-//        viewModel.loadFromDisk()
+        viewModel.loadFromDisk()
         collectionView.reloadData()
     }
     
@@ -104,7 +103,6 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
                 if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController")) as? SelectAddMethodViewController {
                     vc.delegate = self
-                    selectAddMethodViewController = vc
                     presentViewControllerAsSheet(vc)
                 }
             } else {
@@ -199,6 +197,9 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func fromSubscribeButtonClicked() {
         let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
         if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddSubscribeViewController")) as? AddSubscribeViewController {
+            if viewModel.subscribeURLs.count > 0 {
+                vc.initialTextString = viewModel.subscribeURLs.joined(separator: "\n")
+            }
             vc.delegate = self
             presentViewControllerAsSheet(vc)
         }
@@ -207,6 +208,12 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
 
 extension MainProxyListViewController: AddSubscribeViewControllerDelegate {
     func confirmButtonClicked(str: String) {
-        print(str)
+        viewModel.subscribeURLs.removeAll()
+        let arr = str.components(separatedBy: "\n")
+        for url in arr {
+            if url.hasPrefix("http") {
+                viewModel.subscribeURLs.append(url)
+            }
+        }
     }
 }
