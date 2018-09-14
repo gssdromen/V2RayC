@@ -101,8 +101,6 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
         if indexPaths.count == 1 {
             // 新增还是选中
             if indexPaths.first!.item == viewModel.proxyItems.count {
-//                performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ToSelectAddProxyType"), sender: self)
-//                collectionView.selectionIndexes.removeAll()
                 let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
                 if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController")) as? SelectAddMethodViewController {
                     vc.delegate = self
@@ -160,7 +158,6 @@ extension MainProxyListViewController: AddProxyViewDelegate {
                 ss.collectionView.reloadData()
             }
         })
-
     }
 
     func addProxySuccess(proxy: ProxyModel) {
@@ -171,14 +168,45 @@ extension MainProxyListViewController: AddProxyViewDelegate {
 
 extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func normalButtonClicked() {
-        
+        let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
+        if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddProxyViewController")) as? AddProxyViewController {
+            presentViewControllerAsSheet(vc)
+        }
     }
     
     func fromConfigFileButtonClicked() {
-        
+        let openPanel = NSOpenPanel()
+        openPanel.allowsMultipleSelection = false
+        openPanel.canChooseDirectories = false
+        openPanel.canCreateDirectories = false
+        openPanel.canChooseFiles = true
+        openPanel.begin { [weak self] (result) -> Void in
+            if result == NSApplication.ModalResponse.OK {
+                if let url = openPanel.url {
+                    if let ss = self {
+                        let proxyModel = ProxyModel()
+                        proxyModel.from = ProxyFrom.custom
+                        proxyModel.configPath = url.path
+                        ss.viewModel.proxyItems.insert(proxyModel, at: 0)
+                        ss.collectionView.reloadData()
+                        ss.view.window?.close()
+                    }
+                }
+            }
+        }
     }
     
     func fromSubscribeButtonClicked() {
-        
+        let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
+        if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddSubscribeViewController")) as? AddSubscribeViewController {
+            vc.delegate = self
+            presentViewControllerAsSheet(vc)
+        }
+    }
+}
+
+extension MainProxyListViewController: AddSubscribeViewControllerDelegate {
+    func confirmButtonClicked(str: String) {
+        print(str)
     }
 }

@@ -780,10 +780,55 @@
             </objects>
             <point key="canvasLocation" x="858" y="213"/>
         </scene>
+        <!--Add Subscribe View Controller-->
+        <scene sceneID="WSP-qq-45a">
+            <objects>
+                <viewController storyboardIdentifier="AddSubscribeViewController" id="6Ze-86-jwy" customClass="AddSubscribeViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="7RO-P4-9t7">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="180"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n2d-Bt-2uY">
+                                <rect key="frame" x="421" y="13" width="65" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="Uiz-Sn-Tor"/>
+                                    <constraint firstAttribute="height" constant="21" id="Y1Y-u6-5Ed"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jCb-Jv-K96">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="confirmButtonClicked:" target="6Ze-86-jwy" id="gc0-O6-7ZP"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YET-XJ-5vg">
+                                <rect key="frame" x="20" y="49" width="460" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="b3o-qV-dus">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="n2d-Bt-2uY" secondAttribute="bottom" constant="20" id="AYS-CO-UAS"/>
+                            <constraint firstAttribute="trailing" secondItem="n2d-Bt-2uY" secondAttribute="trailing" constant="20" id="IIx-CN-kWu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textInput" destination="YET-XJ-5vg" id="xyx-fT-8Pb"/>
+                    </connections>
+                </viewController>
+                <customObject id="8Jj-vz-OEU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1389" y="213"/>
+        </scene>
         <!--Add Proxy View Controller-->
         <scene sceneID="bvk-Iw-nrI">
             <objects>
-                <viewController id="JLD-fq-6qU" customClass="AddProxyViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddProxyViewController" id="JLD-fq-6qU" customClass="AddProxyViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="DeT-hp-6qu">
                         <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
