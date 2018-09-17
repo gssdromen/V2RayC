@@ -62,7 +62,6 @@ class MainProxyListViewController: NSViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupScrollView()
-        // "https://v2ray.generalapisys.com/client/api.php?token=15b4a279-0d76-4e0f-b395-ce490575da7a&s=v2ray.subscribe&pid=246"
         viewModel.loadFromDisk()
         collectionView.reloadData()
     }
@@ -70,6 +69,18 @@ class MainProxyListViewController: NSViewController {
     override func viewWillDisappear() {
         super.viewWillDisappear()
         viewModel.saveToDisk()
+    }
+}
+
+// MARK: - Main Menu Event
+extension MainProxyListViewController {
+    func refreshSubscribe() {
+        viewModel.clearAllSubscibe()
+        viewModel.fetchFromSubscribe { [weak self] in
+            if let ss = self {
+                ss.collectionView.reloadData()
+            }
+        }
     }
 }
 
@@ -110,28 +121,27 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                     let model = viewModel.proxyItems[i]
                     if i == indexPaths.first!.item {
                         model.isSelected = !model.isSelected
+                        if let from = model.from {
+                            switch from {
+                            case ProxyFrom.subscribtion:
+                                let configModel = genDefaultProxyConfigModel()
+                                configModel.fillWith(model: model)
+                                model.configPath = configModel.writeToConfigJsonFile()
+                            case ProxyFrom.custom:
+                                break
+                            case ProxyFrom.normal:
+                                let configModel = genDefaultProxyConfigModel()
+                                configModel.fillWith(model: model)
+                                model.configPath = configModel.writeToConfigJsonFile()
+                            }
+                        }
+                        generateLaunchdPlistFromProxyModel(model: model)
+                        DispatchQueue.global().async {
+                            _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
+                            _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
+                        }
                     } else {
                         model.isSelected = false
-                    }
-                    
-                    if let from = model.from {
-                        switch from {
-                        case ProxyFrom.subscribtion:
-                            let configModel = genDefaultProxyConfigModel()
-                            configModel.fillWith(model: model)
-                            model.configPath = configModel.writeToConfigJsonFile()
-                        case ProxyFrom.custom:
-                            break
-                        case ProxyFrom.normal:
-                            let configModel = genDefaultProxyConfigModel()
-                            configModel.fillWith(model: model)
-                            model.configPath = configModel.writeToConfigJsonFile()
-                        }
-                    }
-                    generateLaunchdPlistFromProxyModel(model: model)
-                    DispatchQueue.global().async {
-                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
-                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
                     }
                 }
                 collectionView.reloadData()
@@ -151,11 +161,7 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
 
 extension MainProxyListViewController: AddProxyViewDelegate {
     func addSubscribeUrlSuccess(subscribeUrl: String) {
-        viewModel.fetchSubscibeFrom(url: subscribeUrl, complete: { [weak self] in
-            if let ss = self {
-                ss.collectionView.reloadData()
-            }
-        })
+
     }
 
     func addProxySuccess(proxy: ProxyModel) {

@@ -16,8 +16,9 @@ class ProxyItemView: NSView {
         v.wantsLayer = true
         v.isEditable = false
         v.isBezeled = false
+        v.drawsBackground = false
         v.textColor = NSColor(hex: 0x333333)
-        v.font = NSFont.userFont(ofSize: 30)
+        v.font = NSFont.userFont(ofSize: 26)
         v.stringValue = "default"
         return v
     }()
@@ -26,6 +27,7 @@ class ProxyItemView: NSView {
         v.wantsLayer = true
         v.isEditable = false
         v.isBezeled = false
+        v.drawsBackground = false
         v.textColor = NSColor(hex: 0x999999)
         v.font = NSFont.userFont(ofSize: 14)
         v.stringValue = "default"
@@ -36,9 +38,11 @@ class ProxyItemView: NSView {
         v.wantsLayer = true
         v.isEditable = false
         v.isBezeled = false
+        v.drawsBackground = true
         v.textColor = NSColor(hex: 0x291ACC)
         v.font = NSFont.userFont(ofSize: 12)
         v.stringValue = "default"
+        v.alignment = NSTextAlignment.center
         return v
     }()
 
@@ -60,23 +64,30 @@ class ProxyItemView: NSView {
             }
         }
     }
+    
+    func selected(flag: Bool) {
+        nameLabel.textColor = flag ? NSColor.white : NSColor(hex: 0x333333)
+        addressLabel.textColor = flag ? NSColor.white : NSColor(hex: 0x999999)
+    }
 
     // MARK: - Views About
     override func layout() {
         super.layout()
-        nameLabel.pin.top(27).left(29).width(200).height(32)
-        addressLabel.pin.left(33).top(72).width(150).height(30)
-        fromTypeLabel.pin.right(27).top(96).width(100).height(30)
+        nameLabel.pin.top(15).left(18).width(220).height(34)
+        addressLabel.pin.left(33).top(63).width(200).height(30)
+        fromTypeLabel.pin.right(27).top(96).width(83).height(30)
     }
 
     // MARK: - Life Cycle
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         wantsLayer = true
+        nameLabel.layer?.backgroundColor = NSColor.clear.cgColor
+        addressLabel.layer?.backgroundColor = NSColor.clear.cgColor
+        fromTypeLabel.layer?.backgroundColor = NSColor.clear.cgColor
         addSubview(nameLabel)
         addSubview(addressLabel)
         addSubview(fromTypeLabel)
-        nameLabel.layer?.backgroundColor = NSColor.red.cgColor
     }
 
     required init?(coder decoder: NSCoder) {

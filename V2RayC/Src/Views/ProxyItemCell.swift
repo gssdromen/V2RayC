@@ -21,12 +21,13 @@ class ProxyItemCell: NSCollectionViewItem {
     
     func selected(flag: Bool) {
         if flag {
-            myContentView.layer?.backgroundColor = NSColor.red.cgColor
+            myContentView.layer?.backgroundColor = NSColor(hex: 0x455DE1, alpha: 0.7)?.cgColor
             myContentView.frame = NSRect(x: 6, y: 6, width: view.bounds.width - 12, height: view.bounds.height - 12)
         } else {
             myContentView.layer?.backgroundColor = NSColor.white.cgColor
             myContentView.frame = NSRect(x: 12, y: 12, width: view.bounds.width - 24, height: view.bounds.height - 24)
         }
+        myContentView.selected(flag: flag)
     }
     
     // MARK: - Life Cycle

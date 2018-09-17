@@ -94,6 +94,10 @@ class ProxyConfigModel : NSObject, NSCoding, Mappable{
         if let jsonString = toJSONString(), let folderPath = Bundle.main.resourcePath {
             let filePath = "\(folderPath)/config.json"
             
+            if FileManager.default.fileExists(atPath: filePath) {
+                try? FileManager.default.removeItem(atPath: filePath)
+            }
+            
             FileManager.default.createFile(atPath: filePath, contents: jsonString.data(using: String.Encoding.utf8), attributes: nil)
             return filePath
         }

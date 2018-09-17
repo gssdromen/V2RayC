@@ -13,21 +13,21 @@ protocol AddSubscribeViewControllerDelegate: NSObjectProtocol {
 }
 
 class AddSubscribeViewController: NSViewController {
-    @IBOutlet weak var textInput: NSTextField!
-    
+    @IBOutlet weak var scrollView: NSScrollView!
+
     var initialTextString = ""
-    
+
     weak var delegate: AddSubscribeViewControllerDelegate?
-    
+
     // MARK: - UI Event
     @IBAction func confirmButtonClicked(_ sender: Any) {
         dismissViewController(self)
-        if let d = delegate {
-            let str = textInput?.stringValue ?? ""
+        if let d = delegate, let textView = scrollView.documentView as? NSTextView {
+            let str = textView.string
             d.confirmButtonClicked(str: str)
         }
     }
-    
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,8 @@ class AddSubscribeViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        textInput.stringValue = initialTextString
+        if let textView = scrollView.documentView as? NSTextView {
+            textView.string = initialTextString
+        }
     }
 }
