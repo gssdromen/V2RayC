@@ -78,7 +78,9 @@ extension MainProxyListViewController {
         viewModel.clearAllSubscibe()
         viewModel.fetchFromSubscribe { [weak self] in
             if let ss = self {
-                ss.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    ss.collectionView.reloadData()
+                }
             }
         }
     }
@@ -147,6 +149,7 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
                 collectionView.reloadData()
             }
         }
+        collectionView.selectionIndexPaths.removeAll()
     }
 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
