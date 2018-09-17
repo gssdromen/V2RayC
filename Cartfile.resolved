@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "4.7.3"
+github "Hearst-DD/ObjectMapper" "3.3.0"
+github "layoutBox/PinLayout" "1.8.3"
+github "linkedin/LayoutKit" "9.0.0"
+github "thii/SwiftHEXColors" "1.1.2"
