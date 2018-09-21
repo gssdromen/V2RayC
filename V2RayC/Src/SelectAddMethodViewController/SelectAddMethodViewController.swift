@@ -24,21 +24,21 @@ class SelectAddMethodViewController: NSViewController {
     }
     
     @IBAction func normalButtonClicked(_ sender: Any) {
-        dismissViewController(self)
+        dismiss(self)
         if let d = delegate {
             d.normalButtonClicked()
         }
     }
     
     @IBAction func fromConfigFileClicked(_ sender: Any) {
-        dismissViewController(self)
+        dismiss(self)
         if let d = delegate {
             d.fromConfigFileButtonClicked()
         }
     }
     
     @IBAction func fromSubscribeClicked(_ sender: Any) {
-        dismissViewController(self)
+        dismiss(self)
         if let d = delegate {
             d.fromSubscribeButtonClicked()
         }

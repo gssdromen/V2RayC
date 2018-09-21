@@ -1,4 +1,4 @@
 framework module PinLayout {
-    header "PinLayout-Swift.h"
-    requires objc
+  header "PinLayout-Swift.h"
+  requires objc
 }

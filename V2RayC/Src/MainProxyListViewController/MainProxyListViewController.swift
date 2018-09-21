@@ -111,10 +111,10 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
         if indexPaths.count == 1 {
             // 新增还是选中
             if indexPaths.first!.item == viewModel.proxyItems.count {
-                let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
-                if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "SelectAddMethodViewController")) as? SelectAddMethodViewController {
+                let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
+                if let vc = sb.instantiateController(withIdentifier: "SelectAddMethodViewController") as? SelectAddMethodViewController {
                     vc.delegate = self
-                    presentViewControllerAsSheet(vc)
+                    presentAsSheet(vc)
                 }
             } else {
                 for i in 0 ..< viewModel.proxyItems.count {
@@ -150,7 +150,7 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
     }
 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if segue.identifier!.rawValue == "ToAddProxy" {
+        if segue.identifier! == "ToAddProxy" {
             guard let addVC = segue.destinationController as? AddProxyViewController else {
                 return
             }
@@ -172,9 +172,9 @@ extension MainProxyListViewController: AddProxyViewDelegate {
 
 extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func normalButtonClicked() {
-        let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
-        if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddProxyViewController")) as? AddProxyViewController {
-            presentViewControllerAsSheet(vc)
+        let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
+        if let vc = sb.instantiateController(withIdentifier: "AddProxyViewController") as? AddProxyViewController {
+            presentAsSheet(vc)
         }
     }
     
@@ -201,13 +201,13 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     }
     
     func fromSubscribeButtonClicked() {
-        let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main)
-        if let vc = sb.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddSubscribeViewController")) as? AddSubscribeViewController {
+        let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
+        if let vc = sb.instantiateController(withIdentifier: "AddSubscribeViewController") as? AddSubscribeViewController {
             if viewModel.subscribeURLs.count > 0 {
                 vc.initialTextString = viewModel.subscribeURLs.joined(separator: "\n")
             }
             vc.delegate = self
-            presentViewControllerAsSheet(vc)
+            presentAsSheet(vc)
         }
     }
 }

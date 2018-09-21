@@ -26,7 +26,7 @@ class ProxyItemAddView: NSView {
         super.init(frame: frameRect)
         wantsLayer = true
         
-        addMark.image = NSImage(named: NSImage.Name(rawValue: "icon_ProxyItemAddView_Add"))
+        addMark.image = NSImage(named: "icon_ProxyItemAddView_Add")
         addSubview(addMark)
     }
 

@@ -482,6 +482,7 @@
 				TargetAttributes = {
 					82F15A5E213110730079E98A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -490,10 +491,12 @@
 					};
 					82F15A6E213110750079E98A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 82F15A5E213110730079E98A;
 					};
 					82F15A79213110750079E98A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 82F15A5E213110730079E98A;
 					};
 				};
@@ -757,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -779,7 +782,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -799,7 +802,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2RayC.app/Contents/MacOS/V2RayC";
 			};
 			name = Debug;
@@ -820,7 +823,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2RayC.app/Contents/MacOS/V2RayC";
 			};
 			name = Release;
@@ -840,7 +843,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = V2RayC;
 			};
 			name = Debug;
@@ -860,7 +863,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dromen.V2RayCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = V2RayC;
 			};
 			name = Release;

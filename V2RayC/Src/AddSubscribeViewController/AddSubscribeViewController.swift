@@ -21,7 +21,7 @@ class AddSubscribeViewController: NSViewController {
 
     // MARK: - UI Event
     @IBAction func confirmButtonClicked(_ sender: Any) {
-        dismissViewController(self)
+        dismiss(self)
         if let d = delegate, let textView = scrollView.documentView as? NSTextView {
             let str = textView.string
             d.confirmButtonClicked(str: str)
