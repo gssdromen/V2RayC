@@ -27,7 +27,9 @@ class MainProxyListViewModel: NSObject {
     
     func fetchFromSubscribe(complete: @escaping () -> Void) {
         for (_, url) in subscribeURLs.enumerated() {
-            fetchSubscibeFrom(url: url, complete: nil)
+            fetchSubscibeFrom(url: url, complete: {
+                complete()
+            })
         }
     }
     
