@@ -50,10 +50,8 @@
 		A70CAAC6213A820300807255 /* LayoutKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */; };
 		A728EF4D213E802300C7FC6B /* geoip.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF45213E802200C7FC6B /* geoip.dat */; };
 		A728EF4E213E802300C7FC6B /* geosite.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF46213E802200C7FC6B /* geosite.dat */; };
-		A728EF50213E802300C7FC6B /* v2ray.sig in Resources */ = {isa = PBXBuildFile; fileRef = A728EF48213E802200C7FC6B /* v2ray.sig */; };
 		A728EF51213E802300C7FC6B /* v2ray in Resources */ = {isa = PBXBuildFile; fileRef = A728EF49213E802200C7FC6B /* v2ray */; };
 		A728EF52213E802300C7FC6B /* v2ctl in Resources */ = {isa = PBXBuildFile; fileRef = A728EF4A213E802200C7FC6B /* v2ctl */; };
-		A728EF54213E802300C7FC6B /* v2ctl.sig in Resources */ = {isa = PBXBuildFile; fileRef = A728EF4C213E802200C7FC6B /* v2ctl.sig */; };
 		A728EF57213E8A6F00C7FC6B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728EF56213E8A6F00C7FC6B /* Utils.swift */; };
 		A73256CD2140F71000DBE2BA /* initLaunchPath.sh in Resources */ = {isa = PBXBuildFile; fileRef = A73256CC2140F71000DBE2BA /* initLaunchPath.sh */; };
 		A73256FD2140FBD100DBE2BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73256FC2140FBD100DBE2BA /* Cocoa.framework */; };
@@ -169,10 +167,8 @@
 		A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LayoutKit.framework.dSYM; path = Frameworks/LayoutKit.framework.dSYM; sourceTree = "<group>"; };
 		A728EF45213E802200C7FC6B /* geoip.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geoip.dat; sourceTree = "<group>"; };
 		A728EF46213E802200C7FC6B /* geosite.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geosite.dat; sourceTree = "<group>"; };
-		A728EF48213E802200C7FC6B /* v2ray.sig */ = {isa = PBXFileReference; lastKnownFileType = file; path = v2ray.sig; sourceTree = "<group>"; };
 		A728EF49213E802200C7FC6B /* v2ray */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = v2ray; sourceTree = "<group>"; };
 		A728EF4A213E802200C7FC6B /* v2ctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = v2ctl; sourceTree = "<group>"; };
-		A728EF4C213E802200C7FC6B /* v2ctl.sig */ = {isa = PBXFileReference; lastKnownFileType = file; path = v2ctl.sig; sourceTree = "<group>"; };
 		A728EF56213E8A6F00C7FC6B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A73256CC2140F71000DBE2BA /* initLaunchPath.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = initLaunchPath.sh; sourceTree = "<group>"; };
 		A73256FC2140FBD100DBE2BA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -360,10 +356,8 @@
 			children = (
 				A728EF45213E802200C7FC6B /* geoip.dat */,
 				A728EF46213E802200C7FC6B /* geosite.dat */,
-				A728EF48213E802200C7FC6B /* v2ray.sig */,
 				A728EF49213E802200C7FC6B /* v2ray */,
 				A728EF4A213E802200C7FC6B /* v2ctl */,
-				A728EF4C213E802200C7FC6B /* v2ctl.sig */,
 			);
 			path = v2ray;
 			sourceTree = SOURCE_ROOT;
@@ -527,11 +521,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A728EF52213E802300C7FC6B /* v2ctl in Resources */,
-				A728EF54213E802300C7FC6B /* v2ctl.sig in Resources */,
 				A73256CD2140F71000DBE2BA /* initLaunchPath.sh in Resources */,
 				82F15A65213110750079E98A /* Assets.xcassets in Resources */,
 				A728EF4D213E802300C7FC6B /* geoip.dat in Resources */,
-				A728EF50213E802300C7FC6B /* v2ray.sig in Resources */,
 				A728EF4E213E802300C7FC6B /* geosite.dat in Resources */,
 				A728EF51213E802300C7FC6B /* v2ray in Resources */,
 				8293463E2136FE340094719B /* Main.storyboard in Resources */,

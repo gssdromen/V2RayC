@@ -33,12 +33,19 @@ class ProxyItemView: NSView {
         v.stringValue = "default"
         return v
     }()
+    var fromTypeLabelContainer: NSView = {
+        let v = NSView()
+        v.wantsLayer = true
+        v.layer?.cornerRadius = 3
+        v.layer?.backgroundColor = NSColor.white.cgColor
+        return v
+    }()
     var fromTypeLabel: NSTextField = {
         let v = NSTextField()
-        v.wantsLayer = true
+        v.wantsLayer = false
         v.isEditable = false
         v.isBezeled = false
-        v.drawsBackground = true
+
         v.textColor = NSColor(hex: 0x291ACC)
         v.font = NSFont.userFont(ofSize: 12)
         v.stringValue = "default"
@@ -68,6 +75,7 @@ class ProxyItemView: NSView {
     func selected(flag: Bool) {
         nameLabel.textColor = flag ? NSColor.white : NSColor(hex: 0x333333)
         addressLabel.textColor = flag ? NSColor.white : NSColor(hex: 0x999999)
+        
     }
 
     // MARK: - Views About
@@ -75,7 +83,8 @@ class ProxyItemView: NSView {
         super.layout()
         nameLabel.pin.top(15).left(18).width(220).height(34)
         addressLabel.pin.left(33).top(63).width(200).height(30)
-        fromTypeLabel.pin.right(27).top(96).width(83).height(30)
+        fromTypeLabelContainer.pin.right(27).top(96).width(83).height(30)
+        fromTypeLabel.pin.vCenter().left().right().sizeToFit(.width)
     }
 
     // MARK: - Life Cycle
@@ -84,10 +93,11 @@ class ProxyItemView: NSView {
         wantsLayer = true
         nameLabel.layer?.backgroundColor = NSColor.clear.cgColor
         addressLabel.layer?.backgroundColor = NSColor.clear.cgColor
-        fromTypeLabel.layer?.backgroundColor = NSColor.clear.cgColor
+        
+        fromTypeLabelContainer.addSubview(fromTypeLabel)
         addSubview(nameLabel)
         addSubview(addressLabel)
-        addSubview(fromTypeLabel)
+        addSubview(fromTypeLabelContainer)
     }
 
     required init?(coder decoder: NSCoder) {
