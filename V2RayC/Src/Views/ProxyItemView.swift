@@ -48,6 +48,7 @@ class ProxyItemView: NSView {
 
         v.textColor = NSColor(hex: 0x291ACC)
         v.font = NSFont.userFont(ofSize: 12)
+        v.layer?.backgroundColor = NSColor.white.cgColor
         v.stringValue = "default"
         v.alignment = NSTextAlignment.center
         return v
