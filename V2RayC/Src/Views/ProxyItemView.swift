@@ -42,9 +42,9 @@ class ProxyItemView: NSView {
     }()
     var fromTypeLabel: NSTextField = {
         let v = NSTextField()
-        v.wantsLayer = false
-        v.isEditable = false
-        v.isBezeled = false
+        v.wantsLayer = true
+//        v.isEditable = false
+//        v.isBezeled = false
 
         v.textColor = NSColor(hex: 0x291ACC)
         v.font = NSFont.userFont(ofSize: 12)
