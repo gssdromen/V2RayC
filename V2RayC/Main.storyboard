@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -256,7 +256,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="别称(ps)" id="7zG-bv-Oz1">
                                     <font key="font" metaFont="system" size="20"/>
-                                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -268,7 +268,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="地址(address)" id="FQ8-wr-aws">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -280,7 +280,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="端口(port)" id="fHS-J1-jl8">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -292,7 +292,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="身份标识(id)" id="AYT-DM-06T">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -304,7 +304,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="额外身份标识(alterId):" id="AxK-1I-OkF">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -316,7 +316,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="安全模式(security):" id="E40-Wa-KAT">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -328,7 +328,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="网络模式(network):" id="MsT-Id-gYi">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -340,7 +340,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="tls模式(tls):" id="isX-hZ-PE3">
                                     <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -468,20 +468,6 @@
                                     <action selector="confirmClicked:" target="JLD-fq-6qU" id="06d-qd-eGR"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MDM-Jn-8rD">
-                                <rect key="frame" x="543" y="23" width="153" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YTu-V5-ls5"/>
-                                    <constraint firstAttribute="width" constant="153" id="qS5-OZ-s8m"/>
-                                </constraints>
-                                <buttonCell key="cell" type="roundRect" title="从文件中读取" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="nby-DI-B08">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="importFromFile:" target="JLD-fq-6qU" id="OTz-VH-mhy"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0HA-Wi-uxj">
                                 <rect key="frame" x="90" y="20" width="153" height="50"/>
                                 <constraints>
@@ -496,30 +482,14 @@
                                     <action selector="cancelClicked:" target="JLD-fq-6qU" id="LUX-ha-088"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="reE-eN-IPU">
-                                <rect key="frame" x="329" y="23" width="153" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="9LT-AD-L3h"/>
-                                    <constraint firstAttribute="height" constant="50" id="cQq-vt-q7R"/>
-                                </constraints>
-                                <buttonCell key="cell" type="roundRect" title="设置订阅" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="k9J-me-INj">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="subscribeClicked:" target="JLD-fq-6qU" id="thi-0Z-yZh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eVE-1c-p0t" secondAttribute="trailing" constant="59" id="0Pw-ni-32g"/>
                             <constraint firstItem="IkX-6K-dox" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="1XG-gB-m2r"/>
                             <constraint firstItem="lNh-6w-RLr" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="6Ew-lW-fgb"/>
-                            <constraint firstAttribute="bottom" secondItem="reE-eN-IPU" secondAttribute="bottom" constant="23" id="8TX-IM-uA9"/>
                             <constraint firstItem="kEx-Ov-1Q4" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="187" id="Dvi-kg-xXt"/>
                             <constraint firstItem="dfn-AL-Drt" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="E2F-Fw-qmn"/>
                             <constraint firstItem="SgX-AT-ZPz" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="395" id="EAc-Il-vuv"/>
-                            <constraint firstItem="MDM-Jn-8rD" firstAttribute="leading" secondItem="reE-eN-IPU" secondAttribute="trailing" constant="61" id="Eiu-n8-FYg"/>
                             <constraint firstItem="TW3-Gw-duP" firstAttribute="centerY" secondItem="KsG-4B-e6i" secondAttribute="centerY" id="IK9-BR-YFR"/>
                             <constraint firstItem="KsG-4B-e6i" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="30" id="ImW-ef-2Pc"/>
                             <constraint firstItem="dfn-AL-Drt" firstAttribute="centerY" secondItem="kEx-Ov-1Q4" secondAttribute="centerY" id="IvR-wh-112"/>
@@ -533,7 +503,6 @@
                             <constraint firstItem="wF4-y8-drV" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="UQh-69-cty"/>
                             <constraint firstItem="G7C-pj-m7U" firstAttribute="centerY" secondItem="CE1-2K-NgU" secondAttribute="centerY" id="YJF-a9-7Q9"/>
                             <constraint firstItem="0HA-Wi-uxj" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="YXc-nP-yHn"/>
-                            <constraint firstAttribute="bottom" secondItem="MDM-Jn-8rD" secondAttribute="bottom" constant="23" id="YpQ-U0-cMi"/>
                             <constraint firstItem="5ho-gC-Lv1" firstAttribute="centerY" secondItem="wF4-y8-drV" secondAttribute="centerY" id="aGw-LT-XYK"/>
                             <constraint firstItem="feR-7L-TeQ" firstAttribute="centerY" secondItem="mQL-i6-ps2" secondAttribute="centerY" id="cwF-al-uQU"/>
                             <constraint firstItem="wF4-y8-drV" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="83" id="dkZ-Z0-KF9"/>
@@ -543,7 +512,6 @@
                             <constraint firstItem="CE1-2K-NgU" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="gRj-Zy-prW"/>
                             <constraint firstItem="feR-7L-TeQ" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="hfT-EB-35H"/>
                             <constraint firstItem="qOz-jT-kbq" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="iJf-q1-kLd"/>
-                            <constraint firstAttribute="trailing" secondItem="MDM-Jn-8rD" secondAttribute="trailing" constant="264" id="jaL-Ds-gW5"/>
                             <constraint firstItem="qOz-jT-kbq" firstAttribute="centerY" secondItem="SgX-AT-ZPz" secondAttribute="centerY" id="llW-by-qzP"/>
                             <constraint firstItem="lNh-6w-RLr" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="239" id="lng-9D-UYu"/>
                             <constraint firstItem="5ho-gC-Lv1" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="m5q-2I-keJ"/>

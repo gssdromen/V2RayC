@@ -44,29 +44,6 @@ class AddProxyViewController: NSViewController {
         view.window?.close()
     }
     
-    @IBAction func importFromFile(_ sender: NSButton) {
-        let openPanel = NSOpenPanel()
-        openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = false
-        openPanel.canCreateDirectories = false
-        openPanel.canChooseFiles = true
-        openPanel.begin { [weak self] (result) -> Void in
-            if result == NSApplication.ModalResponse.OK {
-                if let url = openPanel.url {
-                    if let ss = self {
-                        let proxyModel = ProxyModel()
-                        proxyModel.from = ProxyFrom.custom
-                        proxyModel.configPath = url.path
-                        if let dele = ss.delegate {
-                            dele.addProxySuccess(proxy: proxyModel)
-                        }
-                        ss.view.window?.close()
-                    }
-                }
-            }
-        }
-    }
-    
     @IBAction func cancelClicked(_ sender: NSButton) {
         view.window?.close()
     }
