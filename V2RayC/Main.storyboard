@@ -124,9 +124,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pwi-I9-cgz"/>
                                 </constraints>
-                                <buttonCell key="cell" type="bevel" title="普通设置" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VBp-6y-K3d">
+                                <buttonCell key="cell" type="bevel" title="普通设置(暂时只有tcp模式)" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VBp-6y-K3d">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="15"/>
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="normalButtonClicked:" target="9OK-52-FsC" id="yTC-hF-IIs"/>
@@ -308,18 +308,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CE1-2K-NgU">
-                                <rect key="frame" x="88" y="216" width="204" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="de7-eX-AEp"/>
-                                    <constraint firstAttribute="width" constant="200" id="fnu-n7-V0J"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="安全模式(security):" id="E40-Wa-KAT">
-                                    <font key="font" size="20" name=".HiraKakuInterface-W3"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mQL-i6-ps2">
                                 <rect key="frame" x="88" y="164" width="204" height="33"/>
                                 <constraints>
@@ -404,23 +392,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-pj-m7U">
-                                <rect key="frame" x="329" y="212" width="403" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="qxn-7E-e3G"/>
-                                    <constraint firstAttribute="height" constant="33" id="rlB-vw-CsK"/>
-                                </constraints>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Z3m-Ob-xPT">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <objectValues>
-                                        <string>Item 1</string>
-                                        <string>Item 2</string>
-                                        <string>Item 3</string>
-                                    </objectValues>
-                                </comboBoxCell>
-                            </comboBox>
                             <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="feR-7L-TeQ">
                                 <rect key="frame" x="329" y="160" width="403" height="39"/>
                                 <constraints>
@@ -495,21 +466,17 @@
                             <constraint firstItem="dfn-AL-Drt" firstAttribute="centerY" secondItem="kEx-Ov-1Q4" secondAttribute="centerY" id="IvR-wh-112"/>
                             <constraint firstItem="SgX-AT-ZPz" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="Ke6-Ok-Tei"/>
                             <constraint firstAttribute="bottom" secondItem="0HA-Wi-uxj" secondAttribute="bottom" constant="20" id="LB4-sg-kjF"/>
-                            <constraint firstItem="G7C-pj-m7U" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="Map-VJ-1mL"/>
                             <constraint firstItem="qLf-06-KMz" firstAttribute="centerY" secondItem="Sgx-Cb-r5z" secondAttribute="centerY" id="Nh5-ad-Jh1"/>
                             <constraint firstItem="Sgx-Cb-r5z" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="P6l-gn-Tfi"/>
                             <constraint firstItem="qLf-06-KMz" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="PhX-u3-zIx"/>
                             <constraint firstItem="IkX-6K-dox" firstAttribute="centerY" secondItem="lNh-6w-RLr" secondAttribute="centerY" id="QDR-yc-jnm"/>
                             <constraint firstItem="wF4-y8-drV" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="UQh-69-cty"/>
-                            <constraint firstItem="G7C-pj-m7U" firstAttribute="centerY" secondItem="CE1-2K-NgU" secondAttribute="centerY" id="YJF-a9-7Q9"/>
                             <constraint firstItem="0HA-Wi-uxj" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="YXc-nP-yHn"/>
                             <constraint firstItem="5ho-gC-Lv1" firstAttribute="centerY" secondItem="wF4-y8-drV" secondAttribute="centerY" id="aGw-LT-XYK"/>
                             <constraint firstItem="feR-7L-TeQ" firstAttribute="centerY" secondItem="mQL-i6-ps2" secondAttribute="centerY" id="cwF-al-uQU"/>
                             <constraint firstItem="wF4-y8-drV" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="83" id="dkZ-Z0-KF9"/>
                             <constraint firstItem="KsG-4B-e6i" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="exY-sA-gdh"/>
                             <constraint firstItem="mQL-i6-ps2" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="343" id="g13-xq-Pik"/>
-                            <constraint firstItem="CE1-2K-NgU" firstAttribute="top" secondItem="DeT-hp-6qu" secondAttribute="top" constant="291" id="gHq-eB-gJb"/>
-                            <constraint firstItem="CE1-2K-NgU" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="90" id="gRj-Zy-prW"/>
                             <constraint firstItem="feR-7L-TeQ" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="hfT-EB-35H"/>
                             <constraint firstItem="qOz-jT-kbq" firstAttribute="leading" secondItem="DeT-hp-6qu" secondAttribute="leading" constant="329" id="iJf-q1-kLd"/>
                             <constraint firstItem="qOz-jT-kbq" firstAttribute="centerY" secondItem="SgX-AT-ZPz" secondAttribute="centerY" id="llW-by-qzP"/>
@@ -529,7 +496,6 @@
                         <outlet property="networkInput" destination="feR-7L-TeQ" id="wx4-Hy-0Ob"/>
                         <outlet property="portInput" destination="qLf-06-KMz" id="1KK-mE-Dtn"/>
                         <outlet property="psInput" destination="TW3-Gw-duP" id="apf-A6-tJq"/>
-                        <outlet property="securityInput" destination="G7C-pj-m7U" id="o5a-0U-fqH"/>
                         <outlet property="tlsInput" destination="qOz-jT-kbq" id="oVH-jW-Idk"/>
                     </connections>
                 </viewController>

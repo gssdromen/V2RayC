@@ -25,6 +25,7 @@ enum ProxySecurity: String {
     case aes128cfb = "aes-128-cfb"
     case aes128gcm = "aes-128-gcm"
     case none = "none"
+    case auto = "auto"
 }
 
 enum ProxyNetwork: String {
