@@ -182,24 +182,9 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     }
     
     func fromConfigFileButtonClicked() {
-        let openPanel = NSOpenPanel()
-        openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = false
-        openPanel.canCreateDirectories = false
-        openPanel.canChooseFiles = true
-        openPanel.begin { [weak self] (result) -> Void in
-            if result == NSApplication.ModalResponse.OK {
-                if let url = openPanel.url {
-                    if let ss = self {
-                        let proxyModel = ProxyModel()
-                        proxyModel.from = ProxyFrom.custom
-                        proxyModel.configPath = url.path
-                        ss.viewModel.proxyItems.insert(proxyModel, at: 0)
-                        ss.collectionView.reloadData()
-                        ss.view.window?.close()
-                    }
-                }
-            }
+        let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
+        if let vc = sb.instantiateController(withIdentifier: "AddConfigFileProxyViewController") as? AddConfigFileProxyViewController {
+            presentAsSheet(vc)
         }
     }
     

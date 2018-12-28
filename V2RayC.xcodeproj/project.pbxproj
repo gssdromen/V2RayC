@@ -57,6 +57,7 @@
 		A73256FD2140FBD100DBE2BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73256FC2140FBD100DBE2BA /* Cocoa.framework */; };
 		A73256FF2140FBDC00DBE2BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A73256FE2140FBDC00DBE2BA /* libz.tbd */; };
 		A73257032141268400DBE2BA /* AddSubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73257022141268400DBE2BA /* AddSubscribeView.swift */; };
+		A76FB04321D60CA30022493E /* AddConfigFileProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB04221D60CA30022493E /* AddConfigFileProxyViewController.swift */; };
 		A7829C1A214B96A90050EA78 /* AddSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7829C19214B96A90050EA78 /* AddSubscribeViewController.swift */; };
 		A7E0CBAE213AC15F00180853 /* SwiftHEXColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */; };
 		A7E0CBAF213AC15F00180853 /* SwiftHEXColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -174,6 +175,7 @@
 		A73256FC2140FBD100DBE2BA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A73256FE2140FBDC00DBE2BA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A73257022141268400DBE2BA /* AddSubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscribeView.swift; sourceTree = "<group>"; };
+		A76FB04221D60CA30022493E /* AddConfigFileProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfigFileProxyViewController.swift; sourceTree = "<group>"; };
 		A7829C19214B96A90050EA78 /* AddSubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscribeViewController.swift; sourceTree = "<group>"; };
 		A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHEXColors.framework; path = Frameworks/SwiftHEXColors.framework; sourceTree = "<group>"; };
 		A7E0CBB0213AC16E00180853 /* SwiftHEXColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftHEXColors.framework.dSYM; path = Frameworks/SwiftHEXColors.framework.dSYM; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		82EA133F21316D5D00759AE0 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				A76FB04121D60C870022493E /* AddConfigFileProxyViewController */,
 				A728EF58213E8A7F00C7FC6B /* Utils */,
 				821DBCB921344898001B58DC /* Views */,
 				82EA134721316DF800759AE0 /* Models */,
@@ -387,6 +390,14 @@
 				A73256FC2140FBD100DBE2BA /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A76FB04121D60C870022493E /* AddConfigFileProxyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A76FB04221D60CA30022493E /* AddConfigFileProxyViewController.swift */,
+			);
+			path = AddConfigFileProxyViewController;
 			sourceTree = "<group>";
 		};
 		A7829C18214B96980050EA78 /* AddSubscribeViewController */ = {
@@ -580,6 +591,7 @@
 				A702079C214245100077DE65 /* Dns.swift in Sources */,
 				A73257032141268400DBE2BA /* AddSubscribeView.swift in Sources */,
 				82EA134621316DB200759AE0 /* MainProxyListViewModel.swift in Sources */,
+				A76FB04321D60CA30022493E /* AddConfigFileProxyViewController.swift in Sources */,
 				82EA134921316E2100759AE0 /* ProxyModel.swift in Sources */,
 				A70207A1214245100077DE65 /* Vnext.swift in Sources */,
 				A702079E214245100077DE65 /* Allocate.swift in Sources */,

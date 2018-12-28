@@ -22,7 +22,6 @@ class AddProxyViewController: NSViewController {
     @IBOutlet weak var portInput: NSTextField!
     @IBOutlet weak var idInput: NSTextField!
     @IBOutlet weak var extraIDInput: NSTextField!
-    @IBOutlet weak var securityInput: NSComboBox!
     @IBOutlet weak var networkInput: NSComboBox!
     @IBOutlet weak var tlsInput: NSComboBox!
     

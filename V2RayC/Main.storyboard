@@ -16,7 +16,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="V2RayC" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About tt" id="5kV-Vb-QxS">
+                                        <menuItem title="About V2RayC" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -35,7 +35,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide tt" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide V2RayC" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -53,7 +53,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit tt" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit V2RayC" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -502,6 +502,69 @@
                 <customObject id="IHI-U3-x52" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1088" y="655"/>
+        </scene>
+        <!--Add Config File Proxy View Controller-->
+        <scene sceneID="5Ps-0o-04v">
+            <objects>
+                <viewController storyboardIdentifier="AddConfigFileProxyViewController" id="lqM-7v-9PR" customClass="AddConfigFileProxyViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="dKZ-zY-7Pl">
+                        <rect key="frame" x="0.0" y="0.0" width="620" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-YU-HJ5">
+                                <rect key="frame" x="69" y="204" width="98" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="GuO-da-ylY"/>
+                                    <constraint firstAttribute="width" constant="94" id="ZsA-8U-luA"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="别称(ps)" id="Hsd-9G-h5E">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JTJ-cE-Gfm">
+                                <rect key="frame" x="173" y="204" width="400" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="HSn-HR-haK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="afK-EU-M4Y"/>
+                                    <constraint firstAttribute="height" constant="33" id="fXf-vW-522"/>
+                                    <constraint firstAttribute="width" constant="400" id="ncS-9x-jFL"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="ZR4-v9-rP5">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button identifier="AddConfigFileProxyViewController" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kfv-5N-bjY">
+                                <rect key="frame" x="273" y="140" width="74" height="21"/>
+                                <buttonCell key="cell" type="roundRect" title="选取文件" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="i6p-0p-3l1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="17"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="selectConfigFileButtonClicked:" target="lqM-7v-9PR" id="UxQ-2f-Uxz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JTJ-cE-Gfm" firstAttribute="leading" secondItem="eXa-YU-HJ5" secondAttribute="trailing" constant="8" id="Axq-VN-FlV"/>
+                            <constraint firstItem="eXa-YU-HJ5" firstAttribute="top" secondItem="dKZ-zY-7Pl" secondAttribute="top" constant="63" id="Cpw-w9-Q85"/>
+                            <constraint firstItem="JTJ-cE-Gfm" firstAttribute="top" secondItem="dKZ-zY-7Pl" secondAttribute="top" constant="63" id="M4U-j2-ydN"/>
+                            <constraint firstItem="Kfv-5N-bjY" firstAttribute="centerX" secondItem="dKZ-zY-7Pl" secondAttribute="centerX" id="QIj-Fp-1B2"/>
+                            <constraint firstItem="Kfv-5N-bjY" firstAttribute="centerY" secondItem="dKZ-zY-7Pl" secondAttribute="centerY" id="c15-v7-EAu"/>
+                            <constraint firstItem="eXa-YU-HJ5" firstAttribute="leading" secondItem="dKZ-zY-7Pl" secondAttribute="leading" constant="71" id="yhw-Tq-vXX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="psInput" destination="JTJ-cE-Gfm" id="DRS-10-wcr"/>
+                        <outlet property="selectButton" destination="Kfv-5N-bjY" id="btv-kW-R3A"/>
+                    </connections>
+                </viewController>
+                <customObject id="Vwo-8N-XhX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="1163"/>
         </scene>
     </scenes>
 </document>
