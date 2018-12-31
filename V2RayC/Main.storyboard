@@ -203,26 +203,26 @@
                                 <rect key="frame" x="20" y="52" width="460" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="5pR-oJ-SdK">
-                                    <rect key="frame" x="1" y="1" width="443" height="106"/>
+                                    <rect key="frame" x="1" y="1" width="458" height="106"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Wlf-bU-zcb">
-                                            <rect key="frame" x="0.0" y="0.0" width="443" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="458" height="106"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="443" height="106"/>
+                                            <size key="minSize" width="458" height="106"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="vQT-6c-dTc">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="vQT-6c-dTc">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CDV-oq-ENH">
-                                    <rect key="frame" x="444" y="1" width="15" height="106"/>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CDV-oq-ENH">
+                                    <rect key="frame" x="443" y="1" width="16" height="106"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -545,6 +545,17 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="selectConfigFileButtonClicked:" target="lqM-7v-9PR" id="UxQ-2f-Uxz"/>
+                                </connections>
+                            </button>
+                            <button identifier="AddConfigFileProxyViewController" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ner-FA-rEH">
+                                <rect key="frame" x="291" y="97" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="取消" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="8dm-dE-FZ8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="17"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelClicked:" target="lqM-7v-9PR" id="TdN-Uc-QSx"/>
                                 </connections>
                             </button>
                         </subviews>

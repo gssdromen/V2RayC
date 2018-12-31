@@ -211,3 +211,10 @@ extension MainProxyListViewController: AddSubscribeViewControllerDelegate {
         }
     }
 }
+
+extension MainProxyListViewController: AddConfigFileProxyViewControllerDelegate {
+    func addConfigFileProxyComplete(proxyModel: ProxyModel) {
+        viewModel.proxyItems.insert(proxyModel, at: 0)
+        collectionView.reloadData()
+    }
+}

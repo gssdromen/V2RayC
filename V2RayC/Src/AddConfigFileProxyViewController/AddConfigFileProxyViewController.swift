@@ -26,6 +26,12 @@ class AddConfigFileProxyViewController: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func cancelClicked(_ sender: NSButton) {
+        if let window = view.window {
+            window.close()
+        }
+    }
+    
     @IBAction func selectConfigFileButtonClicked(_ sender: NSButton) {
         let psName = psInput.stringValue
         guard psName != "" else {
