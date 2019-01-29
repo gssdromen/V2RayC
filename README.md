@@ -15,6 +15,7 @@ V2Ray 项目地址：[https://github.com/v2ray/v2ray-core](https://github.com/v2
  - #### 暂时只支持配置文件读入和从订阅更新
 
 ### 加号新增订阅地址，左上角菜单更新订阅，点击相应的栏目启动
+### 如果订阅无法读取，麻烦把链接发到邮箱 Z3NzZHJvbWVuQGdtYWlsLmNvbQo=
 
  
 ### 感谢
