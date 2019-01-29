@@ -19,6 +19,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func menuPreferencesClicked(_ sender: NSMenuItem) {
+        if let window = NSApp.mainWindow {
+            
+        }
+    }
+
     // MARK: - Life Cycle
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
