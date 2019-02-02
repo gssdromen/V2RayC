@@ -62,27 +62,27 @@ class MainProxyListViewController: NSViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupScrollView()
-        viewModel.loadFromDisk()
+//        viewModel.loadFromDisk()
         collectionView.reloadData()
     }
     
     override func viewWillDisappear() {
         super.viewWillDisappear()
-        viewModel.saveToDisk()
+//        viewModel.saveToDisk()
     }
 }
 
 // MARK: - Main Menu Event
 extension MainProxyListViewController {
     func refreshSubscribe() {
-        viewModel.clearAllSubscibe()
-        viewModel.fetchFromSubscribe { [weak self] in
-            if let ss = self {
-                DispatchQueue.main.async {
-                    ss.collectionView.reloadData()
-                }
-            }
-        }
+//        viewModel.clearAllSubscibe()
+//        viewModel.fetchFromSubscribe { [weak self] in
+//            if let ss = self {
+//                DispatchQueue.main.async {
+//                    ss.collectionView.reloadData()
+//                }
+//            }
+//        }
     }
 }
 
@@ -92,61 +92,42 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
     }
 
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.proxyItems.count + 1
+        let manager = ProxyListManager.shared
+        return manager.proxyModels.count + 1
     }
 
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         var identifier: String!
-        if indexPath.item < viewModel.proxyItems.count {
+        let manager = ProxyListManager.shared
+        if indexPath.item < manager.proxyModels.count {
             identifier = "ProxyItemCell"
         } else {
             identifier = "ProxyItemAddCell"
         }
         let cell = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: identifier), for: indexPath)
         if let itemCell = cell as? ProxyItemCell {
-            itemCell.fillWith(model: viewModel.proxyItems[indexPath.item])
+            itemCell.fillWith(model: manager.proxyModels[indexPath.item])
         }
         return cell
     }
 
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
-        if indexPaths.count == 1 {
+        guard indexPaths.count == 1 else {
+            return
+        }
+        let manager = ProxyListManager.shared
+        if let indexPath = indexPaths.first {
             // 新增还是选中
-            if indexPaths.first!.item == viewModel.proxyItems.count {
+            if indexPath.item == manager.proxyModels.count {
+                // 新增
                 let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
                 if let vc = sb.instantiateController(withIdentifier: "SelectAddMethodViewController") as? SelectAddMethodViewController {
                     vc.delegate = self
                     presentAsSheet(vc)
                 }
             } else {
-                for i in 0 ..< viewModel.proxyItems.count {
-                    let model = viewModel.proxyItems[i]
-                    if i == indexPaths.first!.item {
-                        model.isSelected = !model.isSelected
-                        if let from = model.from {
-                            switch from {
-                            case ProxyFrom.subscribtion:
-                                let configModel = genDefaultProxyConfigModel()
-                                configModel.fillWith(model: model)
-                                model.configPath = configModel.writeToConfigJsonFile()
-                            case ProxyFrom.custom:
-                                break
-                            case ProxyFrom.normal:
-                                let configModel = genDefaultProxyConfigModel()
-                                configModel.fillWith(model: model)
-                                model.configPath = configModel.writeToConfigJsonFile()
-                            }
-                        }
-                        generateLaunchdPlistFromProxyModel(model: model)
-                        DispatchQueue.global().async {
-                            _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", kV2rayCPlistPath])
-                            _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", kV2rayCPlistPath])
-                        }
-                    } else {
-                        model.isSelected = false
-                    }
-                }
-                collectionView.reloadData()
+                // 选中
+                manager.startProxy(index: indexPath.item)
             }
         }
         collectionView.selectionIndexPaths.removeAll()
@@ -168,7 +149,7 @@ extension MainProxyListViewController: AddProxyViewDelegate {
     }
 
     func addProxySuccess(proxy: ProxyModel) {
-        viewModel.proxyItems.append(proxy)
+        ProxyListManager.shared.addProxy(list: [proxy], at: nil)
         collectionView.reloadData()
     }
 }
@@ -191,8 +172,9 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func fromSubscribeButtonClicked() {
         let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
         if let vc = sb.instantiateController(withIdentifier: "AddSubscribeViewController") as? AddSubscribeViewController {
-            if viewModel.subscribeURLs.count > 0 {
-                vc.initialTextString = viewModel.subscribeURLs.joined(separator: "\n")
+            let subscribeURLs = ProxyListManager.shared.subscribeURLs
+            if subscribeURLs.count > 0 {
+                vc.initialTextString = subscribeURLs.joined(separator: "\n")
             }
             vc.delegate = self
             presentAsSheet(vc)
@@ -202,19 +184,20 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
 
 extension MainProxyListViewController: AddSubscribeViewControllerDelegate {
     func confirmButtonClicked(str: String) {
-        viewModel.subscribeURLs.removeAll()
+        var urls = [String]()
         let arr = str.components(separatedBy: "\n")
         for url in arr {
             if url.hasPrefix("http") {
-                viewModel.subscribeURLs.append(url)
+                urls.append(url)
             }
         }
+        ProxyListManager.shared.updateSubscribeURL(urls: urls)
     }
 }
 
 extension MainProxyListViewController: AddConfigFileProxyViewControllerDelegate {
     func addConfigFileProxyComplete(proxyModel: ProxyModel) {
-        viewModel.proxyItems.insert(proxyModel, at: 0)
+        ProxyListManager.shared.addProxy(list: [proxyModel], at: 0)
         collectionView.reloadData()
     }
 }

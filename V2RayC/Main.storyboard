@@ -52,13 +52,45 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="V2RayC" customModuleProvider="target">
                     <connections>
+                        <outlet property="preferenceItem" destination="9C8-W9-OAp" id="N0D-kP-nTy"/>
                         <outlet property="updateSubscribeButton" destination="BOF-NM-1cW" id="mTd-c1-TMN"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112" y="-412"/>
+            <point key="canvasLocation" x="-112" y="-583"/>
+        </scene>
+        <!--Preference View Controller-->
+        <scene sceneID="1g7-LQ-W6L">
+            <objects>
+                <viewController id="BTq-uq-8lc" customClass="PreferenceViewController" customModule="V2RayC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="1CF-S5-t2v">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lP-6o-air">
+                                <rect key="frame" x="349" y="19" width="81" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="确认" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DjF-vr-3ws">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-oM-0UP">
+                                <rect key="frame" x="18" y="22" width="76" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="开机启动" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="X0o-QX-3cB">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="U5F-wH-gUI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-444"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

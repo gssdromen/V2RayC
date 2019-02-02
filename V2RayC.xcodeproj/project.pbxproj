@@ -39,15 +39,24 @@
 		A70207A0214245100077DE65 /* TcpSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078C214245100077DE65 /* TcpSetting.swift */; };
 		A70207A1214245100077DE65 /* Vnext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078D214245100077DE65 /* Vnext.swift */; };
 		A70207A2214245100077DE65 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702078E214245100077DE65 /* Rule.swift */; };
-		A70207A4214245DC0077DE65 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70207A3214245DC0077DE65 /* ObjectMapper.framework */; };
-		A70207A5214245DC0077DE65 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70207A3214245DC0077DE65 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A70207A7214245EC0077DE65 /* ObjectMapper.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */; };
-		A70CAABD213A819100807255 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAAB9213A819000807255 /* Alamofire.framework */; };
-		A70CAABE213A819100807255 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAAB9213A819000807255 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A70CAABF213A819100807255 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAABA213A819000807255 /* LayoutKit.framework */; };
-		A70CAAC0213A819100807255 /* LayoutKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70CAABA213A819000807255 /* LayoutKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A70CAAC5213A820300807255 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70CAAC2213A820200807255 /* Alamofire.framework.dSYM */; };
-		A70CAAC6213A820300807255 /* LayoutKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */; };
+		A70E6A6822057B5D0022493E /* SwiftHEXColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5722057B510022493E /* SwiftHEXColors.framework */; };
+		A70E6A6922057B5D0022493E /* SwiftHEXColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5722057B510022493E /* SwiftHEXColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A6A22057B5D0022493E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5A22057B510022493E /* RxTest.framework */; };
+		A70E6A6B22057B5D0022493E /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5A22057B510022493E /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A6C22057B5D0022493E /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5B22057B510022493E /* PinLayout.framework */; };
+		A70E6A6D22057B5D0022493E /* PinLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5B22057B510022493E /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A6E22057B5D0022493E /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5E22057B510022493E /* RxAtomic.framework */; };
+		A70E6A6F22057B5D0022493E /* RxAtomic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A5E22057B510022493E /* RxAtomic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A7022057B5D0022493E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6022057B510022493E /* Alamofire.framework */; };
+		A70E6A7122057B5D0022493E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6022057B510022493E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A7222057B5D0022493E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6122057B510022493E /* ObjectMapper.framework */; };
+		A70E6A7322057B5D0022493E /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6122057B510022493E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A7422057B5D0022493E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6322057B510022493E /* RxCocoa.framework */; };
+		A70E6A7522057B5D0022493E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6322057B510022493E /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A7622057B5D0022493E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6422057B510022493E /* RxSwift.framework */; };
+		A70E6A7722057B5D0022493E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6422057B510022493E /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A70E6A7822057B5D0022493E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6722057B510022493E /* RxBlocking.framework */; };
+		A70E6A7922057B5D0022493E /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A70E6A6722057B510022493E /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A728EF4D213E802300C7FC6B /* geoip.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF45213E802200C7FC6B /* geoip.dat */; };
 		A728EF4E213E802300C7FC6B /* geosite.dat in Resources */ = {isa = PBXBuildFile; fileRef = A728EF46213E802200C7FC6B /* geosite.dat */; };
 		A728EF51213E802300C7FC6B /* v2ray in Resources */ = {isa = PBXBuildFile; fileRef = A728EF49213E802200C7FC6B /* v2ray */; };
@@ -59,16 +68,12 @@
 		A73257032141268400DBE2BA /* AddSubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73257022141268400DBE2BA /* AddSubscribeView.swift */; };
 		A76FB04321D60CA30022493E /* AddConfigFileProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB04221D60CA30022493E /* AddConfigFileProxyViewController.swift */; };
 		A7829C1A214B96A90050EA78 /* AddSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7829C19214B96A90050EA78 /* AddSubscribeViewController.swift */; };
-		A7E0CBAE213AC15F00180853 /* SwiftHEXColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */; };
-		A7E0CBAF213AC15F00180853 /* SwiftHEXColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A7E0CBB1213AC16E00180853 /* SwiftHEXColors.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7E0CBB0213AC16E00180853 /* SwiftHEXColors.framework.dSYM */; };
-		A7E0CBB3213AC6D300180853 /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBB2213AC6D200180853 /* PinLayout.framework */; };
-		A7E0CBB4213AC6D300180853 /* PinLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7E0CBB2213AC6D200180853 /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A7E0CBB6213AC6DB00180853 /* PinLayout.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7E0CBB5213AC6DB00180853 /* PinLayout.framework.dSYM */; };
 		A7E0CBB9213AD7F800180853 /* ProxyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBB8213AD7F800180853 /* ProxyItemCell.swift */; };
 		A7E0CBBC213AD80F00180853 /* ProxyItemAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBBA213AD80F00180853 /* ProxyItemAddCell.swift */; };
 		A7E0CBC0213ADDB500180853 /* AddProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0CBBF213ADDB500180853 /* AddProxyViewController.swift */; };
 		A7EEA4AB213F7F59005291C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EEA4AA213F7F59005291C7 /* Constants.swift */; };
+		A7FD8D6F22033C5D0022493E /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD8D6E22033C5D0022493E /* PreferenceViewController.swift */; };
+		A7FD8D7222034AB30022493E /* ProxyListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD8D7122034AB30022493E /* ProxyListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,11 +100,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A7E0CBB4213AC6D300180853 /* PinLayout.framework in Embed Frameworks */,
-				A7E0CBAF213AC15F00180853 /* SwiftHEXColors.framework in Embed Frameworks */,
-				A70207A5214245DC0077DE65 /* ObjectMapper.framework in Embed Frameworks */,
-				A70CAAC0213A819100807255 /* LayoutKit.framework in Embed Frameworks */,
-				A70CAABE213A819100807255 /* Alamofire.framework in Embed Frameworks */,
+				A70E6A7322057B5D0022493E /* ObjectMapper.framework in Embed Frameworks */,
+				A70E6A6D22057B5D0022493E /* PinLayout.framework in Embed Frameworks */,
+				A70E6A7522057B5D0022493E /* RxCocoa.framework in Embed Frameworks */,
+				A70E6A6F22057B5D0022493E /* RxAtomic.framework in Embed Frameworks */,
+				A70E6A7722057B5D0022493E /* RxSwift.framework in Embed Frameworks */,
+				A70E6A6B22057B5D0022493E /* RxTest.framework in Embed Frameworks */,
+				A70E6A7122057B5D0022493E /* Alamofire.framework in Embed Frameworks */,
+				A70E6A6922057B5D0022493E /* SwiftHEXColors.framework in Embed Frameworks */,
+				A70E6A7922057B5D0022493E /* RxBlocking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,11 +119,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				A70CAAC5213A820300807255 /* Alamofire.framework.dSYM in CopyFiles */,
-				A7E0CBB6213AC6DB00180853 /* PinLayout.framework.dSYM in CopyFiles */,
-				A70207A7214245EC0077DE65 /* ObjectMapper.framework.dSYM in CopyFiles */,
-				A70CAAC6213A820300807255 /* LayoutKit.framework.dSYM in CopyFiles */,
-				A7E0CBB1213AC16E00180853 /* SwiftHEXColors.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,12 +164,24 @@
 		A702078C214245100077DE65 /* TcpSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpSetting.swift; sourceTree = "<group>"; };
 		A702078D214245100077DE65 /* Vnext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vnext.swift; sourceTree = "<group>"; };
 		A702078E214245100077DE65 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		A70207A3214245DC0077DE65 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Frameworks/ObjectMapper.framework; sourceTree = "<group>"; };
-		A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjectMapper.framework.dSYM; path = Frameworks/ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
-		A70CAAB9213A819000807255 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Frameworks/Alamofire.framework; sourceTree = "<group>"; };
-		A70CAABA213A819000807255 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Frameworks/LayoutKit.framework; sourceTree = "<group>"; };
-		A70CAAC2213A820200807255 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Frameworks/Alamofire.framework.dSYM; sourceTree = "<group>"; };
-		A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LayoutKit.framework.dSYM; path = Frameworks/LayoutKit.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5622057B510022493E /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5722057B510022493E /* SwiftHEXColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftHEXColors.framework; sourceTree = "<group>"; };
+		A70E6A5822057B510022493E /* SwiftHEXColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftHEXColors.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5922057B510022493E /* RxAtomic.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxAtomic.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5A22057B510022493E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
+		A70E6A5B22057B510022493E /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PinLayout.framework; sourceTree = "<group>"; };
+		A70E6A5C22057B510022493E /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5D22057B510022493E /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A5E22057B510022493E /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxAtomic.framework; sourceTree = "<group>"; };
+		A70E6A5F22057B510022493E /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxTest.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A6022057B510022493E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		A70E6A6122057B510022493E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		A70E6A6222057B510022493E /* PinLayout.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = PinLayout.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A6322057B510022493E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		A70E6A6422057B510022493E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		A70E6A6522057B510022493E /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A6622057B510022493E /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		A70E6A6722057B510022493E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 		A728EF45213E802200C7FC6B /* geoip.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geoip.dat; sourceTree = "<group>"; };
 		A728EF46213E802200C7FC6B /* geosite.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = geosite.dat; sourceTree = "<group>"; };
 		A728EF49213E802200C7FC6B /* v2ray */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = v2ray; sourceTree = "<group>"; };
@@ -177,14 +193,12 @@
 		A73257022141268400DBE2BA /* AddSubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscribeView.swift; sourceTree = "<group>"; };
 		A76FB04221D60CA30022493E /* AddConfigFileProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfigFileProxyViewController.swift; sourceTree = "<group>"; };
 		A7829C19214B96A90050EA78 /* AddSubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscribeViewController.swift; sourceTree = "<group>"; };
-		A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHEXColors.framework; path = Frameworks/SwiftHEXColors.framework; sourceTree = "<group>"; };
-		A7E0CBB0213AC16E00180853 /* SwiftHEXColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftHEXColors.framework.dSYM; path = Frameworks/SwiftHEXColors.framework.dSYM; sourceTree = "<group>"; };
-		A7E0CBB2213AC6D200180853 /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Frameworks/PinLayout.framework; sourceTree = "<group>"; };
-		A7E0CBB5213AC6DB00180853 /* PinLayout.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PinLayout.framework.dSYM; path = Frameworks/PinLayout.framework.dSYM; sourceTree = "<group>"; };
 		A7E0CBB8213AD7F800180853 /* ProxyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemCell.swift; sourceTree = "<group>"; };
 		A7E0CBBA213AD80F00180853 /* ProxyItemAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItemAddCell.swift; sourceTree = "<group>"; };
 		A7E0CBBF213ADDB500180853 /* AddProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProxyViewController.swift; sourceTree = "<group>"; };
 		A7EEA4AA213F7F59005291C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7FD8D6E22033C5D0022493E /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		A7FD8D7122034AB30022493E /* ProxyListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,13 +206,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70E6A7622057B5D0022493E /* RxSwift.framework in Frameworks */,
+				A70E6A7422057B5D0022493E /* RxCocoa.framework in Frameworks */,
+				A70E6A6822057B5D0022493E /* SwiftHEXColors.framework in Frameworks */,
 				A73256FF2140FBDC00DBE2BA /* libz.tbd in Frameworks */,
+				A70E6A6A22057B5D0022493E /* RxTest.framework in Frameworks */,
 				A73256FD2140FBD100DBE2BA /* Cocoa.framework in Frameworks */,
-				A7E0CBB3213AC6D300180853 /* PinLayout.framework in Frameworks */,
-				A7E0CBAE213AC15F00180853 /* SwiftHEXColors.framework in Frameworks */,
-				A70CAABF213A819100807255 /* LayoutKit.framework in Frameworks */,
-				A70CAABD213A819100807255 /* Alamofire.framework in Frameworks */,
-				A70207A4214245DC0077DE65 /* ObjectMapper.framework in Frameworks */,
+				A70E6A7022057B5D0022493E /* Alamofire.framework in Frameworks */,
+				A70E6A7822057B5D0022493E /* RxBlocking.framework in Frameworks */,
+				A70E6A6C22057B5D0022493E /* PinLayout.framework in Frameworks */,
+				A70E6A7222057B5D0022493E /* ObjectMapper.framework in Frameworks */,
+				A70E6A6E22057B5D0022493E /* RxAtomic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +259,8 @@
 		82EA133F21316D5D00759AE0 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				A7FD8D70220349BF0022493E /* Manager */,
+				A7FD8D6D22033C400022493E /* PreferenceViewController */,
 				A76FB04121D60C870022493E /* AddConfigFileProxyViewController */,
 				A728EF58213E8A7F00C7FC6B /* Utils */,
 				821DBCB921344898001B58DC /* Views */,
@@ -293,16 +313,7 @@
 		82F15A56213110730079E98A = {
 			isa = PBXGroup;
 			children = (
-				A70207A6214245EC0077DE65 /* ObjectMapper.framework.dSYM */,
-				A70207A3214245DC0077DE65 /* ObjectMapper.framework */,
-				A7E0CBB5213AC6DB00180853 /* PinLayout.framework.dSYM */,
-				A7E0CBB0213AC16E00180853 /* SwiftHEXColors.framework.dSYM */,
-				A70CAAC2213A820200807255 /* Alamofire.framework.dSYM */,
-				A70CAAC3213A820200807255 /* LayoutKit.framework.dSYM */,
-				A7E0CBB2213AC6D200180853 /* PinLayout.framework */,
-				A7E0CBAD213AC15E00180853 /* SwiftHEXColors.framework */,
-				A70CAAB9213A819000807255 /* Alamofire.framework */,
-				A70CAABA213A819000807255 /* LayoutKit.framework */,
+				A70E6A5522057B510022493E /* Frameworks */,
 				82F15A61213110730079E98A /* V2RayC */,
 				82F15A72213110750079E98A /* V2RayCTests */,
 				82F15A7D213110750079E98A /* V2RayCUITests */,
@@ -352,6 +363,31 @@
 				82F15A80213110750079E98A /* Info.plist */,
 			);
 			path = V2RayCUITests;
+			sourceTree = "<group>";
+		};
+		A70E6A5522057B510022493E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A70E6A5622057B510022493E /* RxBlocking.framework.dSYM */,
+				A70E6A5722057B510022493E /* SwiftHEXColors.framework */,
+				A70E6A5822057B510022493E /* SwiftHEXColors.framework.dSYM */,
+				A70E6A5922057B510022493E /* RxAtomic.framework.dSYM */,
+				A70E6A5A22057B510022493E /* RxTest.framework */,
+				A70E6A5B22057B510022493E /* PinLayout.framework */,
+				A70E6A5C22057B510022493E /* RxCocoa.framework.dSYM */,
+				A70E6A5D22057B510022493E /* RxSwift.framework.dSYM */,
+				A70E6A5E22057B510022493E /* RxAtomic.framework */,
+				A70E6A5F22057B510022493E /* RxTest.framework.dSYM */,
+				A70E6A6022057B510022493E /* Alamofire.framework */,
+				A70E6A6122057B510022493E /* ObjectMapper.framework */,
+				A70E6A6222057B510022493E /* PinLayout.framework.dSYM */,
+				A70E6A6322057B510022493E /* RxCocoa.framework */,
+				A70E6A6422057B510022493E /* RxSwift.framework */,
+				A70E6A6522057B510022493E /* ObjectMapper.framework.dSYM */,
+				A70E6A6622057B510022493E /* Alamofire.framework.dSYM */,
+				A70E6A6722057B510022493E /* RxBlocking.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		A728EF44213E802200C7FC6B /* v2ray */ = {
@@ -415,6 +451,22 @@
 				A73257022141268400DBE2BA /* AddSubscribeView.swift */,
 			);
 			path = AddProxyViewController;
+			sourceTree = "<group>";
+		};
+		A7FD8D6D22033C400022493E /* PreferenceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD8D6E22033C5D0022493E /* PreferenceViewController.swift */,
+			);
+			path = PreferenceViewController;
+			sourceTree = "<group>";
+		};
+		A7FD8D70220349BF0022493E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD8D7122034AB30022493E /* ProxyListManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,6 +638,7 @@
 				A7020794214245100077DE65 /* Mux.swift in Sources */,
 				A7020798214245100077DE65 /* TlsSetting.swift in Sources */,
 				A702079B214245100077DE65 /* Inbound.swift in Sources */,
+				A7FD8D7222034AB30022493E /* ProxyListManager.swift in Sources */,
 				A7E0CBBC213AD80F00180853 /* ProxyItemAddCell.swift in Sources */,
 				A728EF57213E8A6F00C7FC6B /* Utils.swift in Sources */,
 				A702079C214245100077DE65 /* Dns.swift in Sources */,
@@ -596,6 +649,7 @@
 				A70207A1214245100077DE65 /* Vnext.swift in Sources */,
 				A702079E214245100077DE65 /* Allocate.swift in Sources */,
 				821DBCBD213448F3001B58DC /* ProxyItemAddView.swift in Sources */,
+				A7FD8D6F22033C5D0022493E /* PreferenceViewController.swift in Sources */,
 				82F15A63213110730079E98A /* AppDelegate.swift in Sources */,
 				A7020796214245100077DE65 /* Outbound.swift in Sources */,
 			);

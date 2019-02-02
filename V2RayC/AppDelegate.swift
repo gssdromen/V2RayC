@@ -11,7 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var updateSubscribeButton: NSMenuItem!
-    
+    @IBOutlet weak var preferenceItem: NSMenuItem!
+
     // MARK: - Main Menu Event
     @IBAction func updateSubscribe(_ sender: NSMenuItem) {
         if let mw = NSApp.mainWindow, let vc = mw.contentViewController as? MainProxyListViewController {
@@ -21,7 +22,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func menuPreferencesClicked(_ sender: NSMenuItem) {
         if let window = NSApp.mainWindow {
-            
+//            var vc = window.contentViewController as? MainProxyListViewController {
+//
+//            }
         }
     }
 
@@ -33,6 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let path = Bundle.main.path(forResource: "initLaunchPath", ofType: "sh")
             _ = runShell(shellFilePath: path!)
         }
+        // 从本地读取保存的代理
+        ProxyListManager.shared.loadFromDisk()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -12,3 +12,5 @@ let kV2rayCPlistPath = "\(NSHomeDirectory())/Library/Application Support/V2RayC/
 let kV2rayConfigFolderPath = "\(NSHomeDirectory())/Library/Application Support/V2RayC/"
 let kV2rayCPlistFolderPath = "\(NSHomeDirectory())/Library/Application Support/V2RayC/"
 let kV2rayBinaryPath = Bundle.main.path(forResource: "v2ray", ofType: nil)
+
+let kSubscribeURLUserDefaultsKey = "subscribeURLs"

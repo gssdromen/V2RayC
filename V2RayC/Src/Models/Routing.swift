@@ -5,7 +5,6 @@
 import Foundation 
 import ObjectMapper
 
-
 class Routing : NSObject, NSCoding, Mappable{
 
 	var settings : Setting?
@@ -18,8 +17,7 @@ class Routing : NSObject, NSCoding, Mappable{
 	required init?(map: Map){}
 	private override init(){}
 
-	func mapping(map: Map)
-	{
+	func mapping(map: Map) {
 		settings <- map["settings"]
 		strategy <- map["strategy"]
 		
@@ -33,7 +31,6 @@ class Routing : NSObject, NSCoding, Mappable{
 	{
          settings = aDecoder.decodeObject(forKey: "settings") as? Setting
          strategy = aDecoder.decodeObject(forKey: "strategy") as? String
-
 	}
 
     /**
@@ -48,7 +45,5 @@ class Routing : NSObject, NSCoding, Mappable{
 		if strategy != nil{
 			aCoder.encode(strategy, forKey: "strategy")
 		}
-
 	}
-
 }
