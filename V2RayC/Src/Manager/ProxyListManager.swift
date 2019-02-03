@@ -62,10 +62,7 @@ class ProxyListManager {
                     model.isSelected = true
                     currentRunningProxyModel = model
                     prepareStartParams(model: model)
-                    DispatchQueue.global().async {
-                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", "-w", kV2rayCPlistPath])
-                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", "-w", kV2rayCPlistPath])
-                    }
+                    startWithLaunchctl()
                 } else {
                     model.isSelected = false
                 }
@@ -74,7 +71,10 @@ class ProxyListManager {
     }
 
     public func stopAllProxy() {
-
+        for model in proxyModels {
+            model.isSelected = false
+        }
+        stopWithLaunchctl()
     }
 
     // MARK: - Public Methods
@@ -123,5 +123,20 @@ class ProxyListManager {
             }
         }
         generateLaunchdPlistFromProxyModel(model: model)
+    }
+
+    /// 用Launchctl运行V2Ray服务
+    private func startWithLaunchctl() {
+        DispatchQueue.global().async {
+            _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", "-w", kV2rayCPlistPath])
+            _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", "-w", kV2rayCPlistPath])
+        }
+    }
+
+    /// 用Launchctl停止运行V2Ray服务
+    private func stopWithLaunchctl() {
+        DispatchQueue.global().async {
+            _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", "-w", kV2rayCPlistPath])
+        }
     }
 }
