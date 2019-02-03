@@ -17,6 +17,7 @@ class ProxyListManager {
     // MARK: - Variables
     public private(set) var proxyModels = [ProxyModel]()
     public private(set) var subscribeURLs = [String]()
+    public private(set) var currentRunningProxyModel: ProxyModel?
 
     // MARK: - Public Methods
     // MARK: 保存 读取 相关
@@ -50,12 +51,25 @@ class ProxyListManager {
     // MARK: - Public Methods
     // MARK: 启动 停止 相关
     public func getCurrentProxyModel() -> ProxyModel? {
-        return nil
+        return currentRunningProxyModel
     }
 
     public func startProxy(index: Int) {
         if index < proxyModels.count {
-
+            for i in 0 ..< proxyModels.count {
+                let model = proxyModels[i]
+                if index == i {
+                    model.isSelected = true
+                    currentRunningProxyModel = model
+                    prepareStartParams(model: model)
+                    DispatchQueue.global().async {
+                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", "-w", kV2rayCPlistPath])
+                        _ = runCommandLine(binPath: "/bin/launchctl", args: ["load", "-w", kV2rayCPlistPath])
+                    }
+                } else {
+                    model.isSelected = false
+                }
+            }
         }
     }
 
@@ -93,4 +107,21 @@ class ProxyListManager {
     }
 
     // MARK: - Private Methods
+    private func prepareStartParams(model: ProxyModel) {
+        if let from = model.from {
+            switch from {
+            case ProxyFrom.subscribtion:
+                let configModel = genDefaultProxyConfigModel()
+                configModel.fillWith(model: model)
+                model.configPath = configModel.writeToConfigJsonFile()
+            case ProxyFrom.custom:
+                break
+            case ProxyFrom.normal:
+                let configModel = genDefaultProxyConfigModel()
+                configModel.fillWith(model: model)
+                model.configPath = configModel.writeToConfigJsonFile()
+            }
+        }
+        generateLaunchdPlistFromProxyModel(model: model)
+    }
 }

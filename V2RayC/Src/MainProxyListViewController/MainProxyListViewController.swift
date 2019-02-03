@@ -62,13 +62,11 @@ class MainProxyListViewController: NSViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupScrollView()
-//        viewModel.loadFromDisk()
-        collectionView.reloadData()
     }
-    
-    override func viewWillDisappear() {
-        super.viewWillDisappear()
-//        viewModel.saveToDisk()
+
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        collectionView.reloadData()
     }
 }
 
@@ -128,6 +126,7 @@ extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionVie
             } else {
                 // 选中
                 manager.startProxy(index: indexPath.item)
+                collectionView.reloadData()
             }
         }
         collectionView.selectionIndexPaths.removeAll()

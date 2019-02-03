@@ -31,6 +31,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Life Cycle
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+    }
+
+    func applicationWillFinishLaunching(_ notification: Notification) {
         // 创建Launch要用到的文件夹
         if !FileManager.default.fileExists(atPath: kV2rayConfigFolderPath) {
             let path = Bundle.main.path(forResource: "initLaunchPath", ofType: "sh")
