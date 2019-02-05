@@ -22,9 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func menuPreferencesClicked(_ sender: NSMenuItem) {
         if let window = NSApp.mainWindow {
-//            var vc = window.contentViewController as? MainProxyListViewController {
-//
-//            }
+
         }
     }
 

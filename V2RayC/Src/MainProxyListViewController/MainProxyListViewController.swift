@@ -164,6 +164,7 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func fromConfigFileButtonClicked() {
         let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
         if let vc = sb.instantiateController(withIdentifier: "AddConfigFileProxyViewController") as? AddConfigFileProxyViewController {
+            vc.delegate = self
             presentAsSheet(vc)
         }
     }

@@ -11,15 +11,7 @@ import ObjectMapper
 import Alamofire
 
 class MainProxyListViewModel: NSObject {
-//    var proxyItems = [ProxyModel]()
-//    var subscribeURLs = [String]()
 
-    // MARK: - Public Methods
-//    func clearAllSubscibe() {
-//        proxyItems = proxyItems.filter { (proxyModel) -> Bool in
-//            return proxyModel.from != ProxyFrom.subscribtion
-//        }
-//    }
 //    
 //    func fetchFromSubscribe(complete: @escaping () -> Void) {
 //        for (_, url) in subscribeURLs.enumerated() {

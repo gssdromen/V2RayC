@@ -61,6 +61,5 @@ class AddConfigFileProxyViewController: NSViewController {
                 }
             }
         }
-
     }
 }

@@ -36,6 +36,8 @@ enum ProxyNetwork: String {
 }
 
 class ProxyModel: NSObject, Mappable {
+    /// 惟一ID
+    var pid: String?
     /// 配置来自
     var from: ProxyFrom?
     /// 地址
@@ -73,7 +75,8 @@ class ProxyModel: NSObject, Mappable {
     
     // MARK: - Mappable
     required init?(map: Map) { }
-    override init() { }
+    override init() {
+    }
     
     func mapping(map: Map) {
         from <- map["from"]

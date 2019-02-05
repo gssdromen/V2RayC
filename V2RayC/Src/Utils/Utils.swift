@@ -90,3 +90,9 @@ func genDefaultProxyConfigModel() -> ProxyConfigModel {
     return model!
 }
 
+public func getUUID() -> String {
+    let uuidRef = CFUUIDCreate(nil)
+    let uuidStringRef = CFUUIDCreateString(nil, uuidRef)
+    let uuidString = uuidStringRef as String?
+    return uuidString ?? ""
+}
