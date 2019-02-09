@@ -55,14 +55,6 @@ class ProxyListManager {
             _ = runCommandLine(binPath: "/bin/launchctl", args: ["unload", "-w", kV2rayCPlistPath])
         }
     }
-
-    /// 清除所有类型是订阅的ProxyModel，准备更新
-    private func clearAllSubscibe() {
-        proxyModels = proxyModels.filter { (proxyModel) -> Bool in
-            return proxyModel.from != ProxyFrom.subscribtion
-        }
-        proxyModelSignal.onNext(0)
-    }
 }
 
 // MARK: - Public Methods 保存 读取 相关
@@ -127,6 +119,14 @@ extension ProxyListManager {
 
 // MARK: - Public Methods 添加 删除 相关
 extension ProxyListManager {
+    /// 清除所有类型是订阅的ProxyModel，准备更新
+    public func clearAllSubscibe() {
+        proxyModels = proxyModels.filter { (proxyModel) -> Bool in
+            return proxyModel.from != ProxyFrom.subscribtion
+        }
+        proxyModelSignal.onNext(0)
+    }
+
     /// 新增代理
     ///
     /// - Parameters:

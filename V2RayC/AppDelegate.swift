@@ -15,8 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Main Menu Event
     @IBAction func updateSubscribe(_ sender: NSMenuItem) {
-        if let mw = NSApp.mainWindow, let vc = mw.contentViewController as? MainProxyListViewController {
-            vc.refreshSubscribe()
+        ProxyListManager.shared.clearAllSubscibe()
+        _ = ProxyListManager.shared.subscribeURLs.map { (url) -> Void in
+            fetchProxyModelsFrom(url: url)
         }
     }
     

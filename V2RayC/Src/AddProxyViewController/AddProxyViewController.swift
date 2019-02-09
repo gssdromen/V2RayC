@@ -98,7 +98,6 @@ class AddProxyViewController: NSViewController {
         super.viewDidLoad()
         subscribeView.delegate = self
     }
-    
 }
 
 extension AddProxyViewController: AddSubscribeViewDelegate {

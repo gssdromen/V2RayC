@@ -7,6 +7,10 @@
 //
 import Foundation
 import Cocoa
+import RxSwift
+import RxAtomic
+import RxCocoa
+import Alamofire
 
 func generateLaunchdPlistFromProxyModel(model: ProxyModel) -> Void {
     let isDir: UnsafeMutablePointer<ObjCBool> = UnsafeMutablePointer<ObjCBool>.allocate(capacity: 1)
@@ -95,4 +99,19 @@ public func getUUID() -> String {
     let uuidStringRef = CFUUIDCreateString(nil, uuidRef)
     let uuidString = uuidStringRef as String?
     return uuidString ?? ""
+}
+
+func fetchSubscribeContentFrom(url: String) -> Driver<String> {
+    let obj = Observable<String>.create { (observer) -> Disposable in
+        Alamofire.request(url).responseJSON { response in
+            if let resp = response.response, resp.statusCode == 200 {
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    observer.onNext(utf8Text)
+                    observer.onCompleted()
+                }
+            }
+        }
+        return Disposables.create()
+    }
+    return obj.asDriver(onErrorJustReturn: "")
 }

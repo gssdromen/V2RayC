@@ -70,20 +70,6 @@ class MainProxyListViewController: NSViewController {
     }
 }
 
-// MARK: - Main Menu Event
-extension MainProxyListViewController {
-    func refreshSubscribe() {
-//        viewModel.clearAllSubscibe()
-//        viewModel.fetchFromSubscribe { [weak self] in
-//            if let ss = self {
-//                DispatchQueue.main.async {
-//                    ss.collectionView.reloadData()
-//                }
-//            }
-//        }
-    }
-}
-
 extension MainProxyListViewController: NSCollectionViewDelegate, NSCollectionViewDataSource {
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return 1
@@ -157,6 +143,7 @@ extension MainProxyListViewController: SelectAddMethodViewControllerDelegate {
     func normalButtonClicked() {
         let sb = NSStoryboard(name: "Main", bundle: Bundle.main)
         if let vc = sb.instantiateController(withIdentifier: "AddProxyViewController") as? AddProxyViewController {
+            vc.delegate = self
             presentAsSheet(vc)
         }
     }
