@@ -22,6 +22,10 @@ class MainProxyListViewController: NSViewController {
     var runTask: Process!
 
     // MARK: - Views About
+    @objc func refreshProxyView() {
+        self.collectionView.reloadData()
+    }
+    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -62,6 +66,8 @@ class MainProxyListViewController: NSViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupScrollView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MainProxyListViewController.refreshProxyView), name: NSNotification.Name.init(kSubscribeRefreshComplete), object: nil)
     }
 
     override func viewDidAppear() {

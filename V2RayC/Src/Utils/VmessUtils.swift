@@ -29,7 +29,7 @@ func fetchProxyModelsFrom(url: String) {
     _ = fetchSubscribeContentFrom(url: url).drive(onNext: { (content) in
         handleSubscribeInfoType1(contentString: content)
     }, onCompleted: {
-
+        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: kSubscribeRefreshComplete)))
     }, onDisposed: {
 
     })
