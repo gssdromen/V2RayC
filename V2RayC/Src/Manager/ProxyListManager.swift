@@ -133,14 +133,12 @@ extension ProxyListManager {
     ///   - list: 代理列表
     ///   - at: 添加在哪个index，不传默认添加在最后，超出范围也添加在最后
     public func addProxy(list: [ProxyModel], at: Int?) {
-        if at == nil {
+        if at == nil || at! >= proxyModels.count {
             proxyModels.append(contentsOf: list)
-        }
-        if at! >= proxyModels.count {
-            proxyModels.append(contentsOf: list)
-        }
-        for model in list {
-            proxyModels.insert(model, at: at!)
+        } else {
+            for model in list {
+                proxyModels.insert(model, at: at!)
+            }
         }
         saveToDisk()
     }
