@@ -84,6 +84,7 @@ extension ProxyListManager {
         if models.count > 0 {
             proxyModels = models
         }
+        subscribeURLs = UserDefaults.standard.stringArray(forKey: kSubscribeURLUserDefaultsKey) ?? []
     }
 }
 
