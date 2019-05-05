@@ -73,6 +73,11 @@ class ProxyModel: NSObject, Mappable {
         }
     }
     
+    func deleteFromDisk() {
+        let path = "\(kV2rayConfigFolderPath)\(remarks ?? "default").json"
+        try? FileManager.default.removeItem(atPath: path)
+    }
+    
     // MARK: - Mappable
     required init?(map: Map) { }
     override init() {

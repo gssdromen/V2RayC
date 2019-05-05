@@ -122,6 +122,11 @@ extension ProxyListManager {
 extension ProxyListManager {
     /// 清除所有类型是订阅的ProxyModel，准备更新
     public func clearAllSubscibe() {
+        var subscribeModels = [ProxyModel]()
+        subscribeModels = proxyModels.filter { (proxyModel) -> Bool in
+            return proxyModel.from == ProxyFrom.subscribtion
+        }
+        deleteProxy(list: subscribeModels)
         proxyModels = proxyModels.filter { (proxyModel) -> Bool in
             return proxyModel.from != ProxyFrom.subscribtion
         }
@@ -148,7 +153,9 @@ extension ProxyListManager {
     ///
     /// - Parameter list: 代理列表
     public func deleteProxy(list: [ProxyModel]) {
-
+        for model in list {
+            model.deleteFromDisk()
+        }
     }
 
     /// 更新所有订阅的地址
