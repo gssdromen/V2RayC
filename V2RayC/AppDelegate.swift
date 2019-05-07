@@ -15,10 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Main Menu Event
     @IBAction func updateSubscribe(_ sender: NSMenuItem) {
-        ProxyListManager.shared.clearAllSubscibe()
-        _ = ProxyListManager.shared.subscribeURLs.map { (url) -> Void in
-            fetchProxyModelsFrom(url: url)
-        }
+        ProxyListManager.shared.updateProxyFromSubscribe()
     }
     
     @IBAction func menuPreferencesClicked(_ sender: NSMenuItem) {

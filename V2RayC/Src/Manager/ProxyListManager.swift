@@ -163,12 +163,14 @@ extension ProxyListManager {
     /// - Parameter urls: 订阅地址
     public func updateSubscribeURL(urls: [String]) {
         subscribeURLs = urls
+        saveToDisk()
     }
 
     /// 从订阅的链接中更新订阅
     public func updateProxyFromSubscribe() {
-        for url in subscribeURLs {
-            
+        clearAllSubscibe()
+        _ = subscribeURLs.map { (url) -> Void in
+            fetchProxyModelsFrom(url: url)
         }
     }
 }
