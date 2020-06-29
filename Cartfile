@@ -1,6 +1,0 @@
-github "linkedin/LayoutKit"
-github "layoutBox/PinLayout"
-github "Alamofire/Alamofire" ~> 4.7
-github "thii/SwiftHEXColors"
-github "Hearst-DD/ObjectMapper" ~> 3.3
-github "ReactiveX/RxSwift" ~> 4.0
